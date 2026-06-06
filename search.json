@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Persuasion via Man and Machine",
+    "section": "",
+    "text": "0.1 Abstract\nThis is a living review — entries are continuously added and revised as the field evolves. The LaTeX source, bibliography, and compiled PDF are always available on GitHub. Readers are encouraged to open an issue to suggest missing work.\nAlso see the author’s PhD thesis — Behavior As A Modality: A Framework To Enable Automated Persuasion — for closely related work.\nThis living review synthesises the science and engineering of persuasion across five millennia of scholarship and across the disciplinary boundaries that have kept the field fragmented — rhetoric, psychology, linguistics, political science, marketing, and artificial intelligence. We argue that persuasion is best understood as the optimisation of the effect of a message on a receiver, and that machine learning is now a fully-fledged participant in that optimisation — as an instrument, as an object of study, and as a threat.\nBecause this is a living review, entries are added and revised continuously. Readers are encouraged to open an issue on GitHub to suggest missing work.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Persuasion via Man and Machine</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-cite",
+    "href": "index.html#how-to-cite",
+    "title": "Persuasion via Man and Machine",
+    "section": "0.2 How to Cite",
+    "text": "0.2 How to Cite\n@misc{singla2025persuasion,\n  author    = {Singla, Yaman Kumar},\n  title     = {Persuasion via Man and Machine: A Living Review},\n  year      = {2025},\n  url       = {https://yamanksingla.github.io},\n  note      = {Living review, continuously updated}\n}",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Persuasion via Man and Machine</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-introduction.html",
+    "href": "chapters/01-introduction.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "2.1 Why This Survey?\nCommunication is defined as optimising the effect of a message on a receiver sent over a channel by a sender at a particular time [3, 4, 6]. This optimisation of altering the receiver’s opinions, beliefs, or actions is also referred to as persuasion. The study of communication or persuasion as a universal human practice is among the most ancient of human concerns. Persuasion has been looked at as the art and science of how we get anything done. Once, it helped our ancestors to plan and execute hunting expeditions, and today, it helps us plan massive projects like the Large Hadron Collider and even inter-planetary expeditions like Europa Clipper.\nPersuasion enables making ourselves understood sufficiently well so that we can coordinate our actions. The ability to persuade is not unique to our species. Persuasion is observed in both conspecific [1] and interspecific [2] scenarios. For example, both monkeys and apes yielded episodes indicating they were able to judge very finely how to obtain or hide desirable objects deceptively from the gaze of others [1]. We humans are exceptional in our capacity to cooperate with strangers. Language allowed our ancestors to cooperate, and helped to resolve conflicts by exchanging information, though this includes invented fictions, social constructions, and other imagined realities.\nFor example, on encountering the explorer James Cook, two Fuegian islanders stepped forward to display and then throw aside large sticks, gestures that Cook interpreted as indicating peaceful intentions. Indeed, the Fuegians and Cook were soon exchanging gifts and eating together on board ship.\n4 years were children very competent in recognizing that others’ mental representations of the world could be very different to their own and need to be computed to predict their future actions accurately, as seen most revealingly in the context of deception and false beliefs (Wimmer & Perner 1983).\nA second, and no less important, reason involves influencing other Homo sapiens (Mercier & Sperber, 2011). Sloman and Fernbach (2017) assure us of the very real limits of our individual knowledge and its inadequacy for accomplishing many, perhaps most, of the tasks that we face daily.\nOne of the oldest books on persuasion, called Precepts, written by Ptah-Hotep for the Pharaoh, is 4,500 years old (2375 BCE). Rhetoric — the use of symbols to persuade other humans — began in ancient Greece and its Mediterranean colonies in the fifth century BCE when there were situations of collective decision making that inspired some practitioners to ask how persuading others was best accomplished.\nThe study of persuasion as a discipline is in its third millennium. It was Plato’s student, Aristotle, who provided the first comprehensive theory of rhetorical discourse. He defined rhetoric in terms of “observing in a given case the available means of Persuasion,” instructing that the “available means” encompassed a range of appeals, some grounded in logic (logos), others in emotion (pathos), and still others in the communicator (ethos). Aristotle urged communicators to base judgments about the most appropriate means of Persuasion on the nature of the audience. His views had long-lasting impact: “Aristotle’s theory of rhetorical discourse has withstood the test of time, furnishing axioms that guide today’s practitioners of Persuasion and campaigns.”\nIn the West, the tumultuous emergence of democracy in fourth-century BCE Athens gave rise to a class of civic intellectuals teaching persuasive speaking — known as Sophists — to the establishment of rhetoric as a field of study, and to clashes with another new field, philosophy, over explanations of the linguistic features running through belief, knowledge, argumentation, and human conduct. The early modern period was another epoch of intensified interest, with the rise of print, the Reformation, technoscience, and the colonial pursuits of Europe. The middle of the twentieth century was still another, when propaganda studies, argumentation studies, and the New Rhetoric all arose from the trauma of the Second World War.\nWe are in another such period now. Large Language Models have opened a new chapter in the history of persuasion — one in which the sender of a message may be a machine, the message may be tailored to a single individual at a cost approaching zero, and the channel may be every screen simultaneously. This review documents what we know, what we do not, and what the field must now answer.\nWhen people think of persuasion they often think of debates over controversial topics, where distinct individuals and groups invested in different viewpoints confront one another. In these situations, successful persuasion amounts to convincing people to cross over from one side to the other. However, most fully formed persuasive discourse is not aimed at people who disagree anyway; in fact it is usually aimed at people who already agree, but whose agreement can be lessened or intensified.\nPersuasion is also aimed at forming beliefs in the first place in people who have no stance on an issue at all. Response shaping is roughly the acquisition of an attitude, whereas response reinforcement can be equated with strengthening a preexisting attitude. By contrast, response changing references movement across the midpoint of an attitude scale.\nAt both a more subtle and a more powerful level, it has been argued that the Persuasion profession “serves not so much to advertise products as to promote consumption as a way of life” (Lasch, 1978, p. 72). But many of these same marketing techniques are also used to help solve pressing social problems such as improvement of the nation’s health.\nCharismatic leaders such as Nelson Mandela, Martin Luther King Jr., and Mahatma Gandhi have stirred the masses and brought about radical social change, even when lacking significant institutional power or money. And in 2014, the “Ice Bucket Challenge” persuaded people to donate, ultimately taking in over $115 million, funding groundbreaking ALS research.\nPeople, however, can be remarkably resistant to persuasion. Many well-designed, well-funded efforts to encourage people to practice safe sex, stop using drugs, or improve their diet have failed [5]. People can be stubbornly resistant to changing their minds, even when their health or economic well-being is affected.\nThe basic difference between the sciences that study persuasion can be characterised as: the how of persuasion vs the what of persuasion. Right now, machine learning is not given a seat at the table where rhetoric and persuasion are discussed. Top academic programmes in rhetoric do not discuss the advances that computers have enabled.\nSimilarly, in the machine learning field, there has been comparatively little research on persuasion. Further, whatever research there has been has been in the context of optimising content for persuasion. On the other hand, persuasion should be seen as optimising across the source, channel, time, message, and even the audience — the full SCEMA framework.\nWhat makes the study of persuasion interesting and difficult at the same time is that every field has tried to answer the same fundamental question from a different vantage point, accumulating incompatible vocabularies, incommensurable measures, and siloed literatures. This review attempts a unification.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-introduction.html#sec-early",
+    "href": "chapters/01-introduction.html#sec-early",
+    "title": "2  Introduction",
+    "section": "2.2 Early Beginnings",
+    "text": "2.2 Early Beginnings\n\nLanguage itself is believed to have developed largely because of the need for cooperation — therefore, persuasion is coextensive with sociality.\nAristotle’s Rhetoric (4th c. BCE) remains the founding document of the field.\nMythology is an artefact of persuasion: narratives that mobilise groups around shared values.\nLinguistic devices — tropes, metaphors, humour — are the micro-mechanisms through which persuasion operates.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-introduction.html#sec-ethics",
+    "href": "chapters/01-introduction.html#sec-ethics",
+    "title": "2  Introduction",
+    "section": "2.3 Common Misconceptions and Ethical Challenges",
+    "text": "2.3 Common Misconceptions and Ethical Challenges\n\n\n\n\n\n\nCaution\n\n\n\nThis section is under active development. Suggest content via GitHub Issues.\n\n\n\n\n\n\n[1] Hare, B. et al. 2000. Chimpanzees know what conspecifics do and do not see. Animal Behaviour. 59, 4 (2000), 771–785.\n\n\n[2] Krebs, J.R. and Dawkins, R. 1984. Animal signals: Mind-reading and manipulation. (1984).\n\n\n[3] Lasswell, H.D. 1971. Propaganda technique in world war i. MIT press.\n\n\n[4] Lasswell, H.D. 1948. The structure and function of communication in society. The communication of ideas. 37, 1 (1948), 136–139.\n\n\n[5] Petty, R.E. and Cacioppo, J.T. 1986. The elaboration likelihood model of persuasion. Communication and persuasion. Springer. 1–24.\n\n\n[6] Shannon, C.E. and Weaver, W. 1949. The mathematical theory of communication. University of Illinois Press.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html",
+    "href": "chapters/02-views.html",
+    "title": "3  Views of Different Fields",
+    "section": "",
+    "text": "3.1 Psychology\nPersuasion is one of those rare phenomena that every human discipline claims as its own. The table below maps the dominant lens, the canonical measure, and the key open question that each field brings to the common problem.\nPsychology has produced the most influential theoretical frameworks in persuasion research. Three dominate the modern literature:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-psych",
+    "href": "chapters/02-views.html#sec-psych",
+    "title": "3  Views of Different Fields",
+    "section": "",
+    "text": "Cognitive Dissonance Theory [festinger1957theory?]\n\nPeople experience discomfort when holding inconsistent beliefs and are motivated to reduce it, making them susceptible to persuasion that resolves the inconsistency.\n\nMatching Hypothesis\n\nMessages are more persuasive when they match the audience’s regulatory focus (promotion vs. prevention orientation).\n\nElaboration Likelihood Model [1]\n\nThe dual-process model distinguishing the central route (argument-quality driven) from the peripheral route (heuristic driven). The route taken depends on motivation and ability to process the message.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-ling",
+    "href": "chapters/02-views.html#sec-ling",
+    "title": "3  Views of Different Fields",
+    "section": "3.2 Linguistics",
+    "text": "3.2 Linguistics\nHosman neatly subdivides the linguistics of persuasion in terms of phonology, syntax, lexicon, and text/narrative before turning to an examination of the effects of each on judgements of the message source, recall, and attitude change. Key findings include: powerful versus powerless speech styles, hedging, intensifiers, rhetorical questions, and the surprising persuasive force of narrative over argument in some populations.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-soc",
+    "href": "chapters/02-views.html#sec-soc",
+    "title": "3  Views of Different Fields",
+    "section": "3.3 Sociology",
+    "text": "3.3 Sociology\n\n\n\n\n\n\nCaution\n\n\n\nSection under active development.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-econ",
+    "href": "chapters/02-views.html#sec-econ",
+    "title": "3  Views of Different Fields",
+    "section": "3.4 Economics & Behavioural Economics",
+    "text": "3.4 Economics & Behavioural Economics\nBehavioural economics treats persuasion through the lens of systematic cognitive biases — the anchoring effect, loss aversion, default effects, and social proof — that make humans predictably susceptible to certain message architectures. Thaler & Sunstein’s nudge framework formalised this: changing the choice architecture can shift behaviour without mandate, a form of structural persuasion.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-polsci",
+    "href": "chapters/02-views.html#sec-polsci",
+    "title": "3  Views of Different Fields",
+    "section": "3.5 Political Science",
+    "text": "3.5 Political Science\n\n“Persuasion is ubiquitous in the political process; it is also the central aim of political interaction. It is literally the stuff of politics.”\n— Mutz, Sniderman & Brody, 1996\n\nPolitical science studies persuasion at the level of populations: propaganda, agenda-setting, framing effects, and the conditions under which people update political beliefs. Electoral persuasion effects are famously small but real — and AI micro-targeting threatens to amplify them at industrial scale.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-mktg",
+    "href": "chapters/02-views.html#sec-mktg",
+    "title": "3  Views of Different Fields",
+    "section": "3.6 Marketing & Advertising",
+    "text": "3.6 Marketing & Advertising\nMarketing operationalises persuasion at commercial scale. The discipline has produced rich empirical literatures on message memorability, the effectiveness of emotional vs. rational appeals, celebrity endorsement, scarcity and social proof, and the varying persuasive power of different media channels. The rise of programmatic advertising and data-driven micro-targeting has brought marketing into direct dialogue with AI.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-cs",
+    "href": "chapters/02-views.html#sec-cs",
+    "title": "3  Views of Different Fields",
+    "section": "3.7 Computer Science & AI",
+    "text": "3.7 Computer Science & AI\nCS and AI engage persuasion through multiple sub-fields:\n\nFormal argumentation — Dung’s abstract argumentation frameworks, computational models of argument strength.\nArgumentation mining in NLP — automatic identification of claims, premises, and attack/support relations in text.\nComputer vision — recognising persuasive intent in images and video; visual rhetoric; ad-effectiveness prediction.\nLarge Language Models — generating and detecting persuasive text; the frontier where the field is now accelerating most rapidly.\nAgentic systems — AI agents that negotiate, persuade, and adapt their communication strategy to an interlocutor.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-views.html#sec-neuro",
+    "href": "chapters/02-views.html#sec-neuro",
+    "title": "3  Views of Different Fields",
+    "section": "3.8 Neuroscience",
+    "text": "3.8 Neuroscience\n\n\n\n\n\n\nCaution\n\n\n\nSection under active development.\n\n\n\n\n\n\n[1] Petty, R.E. and Cacioppo, J.T. 1986. The elaboration likelihood model of persuasion. Communication and persuasion. Springer. 1–24.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Views of Different Fields</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-automated.html",
+    "href": "chapters/03-automated.html",
+    "title": "4  Types of Work in Automated Persuasion",
+    "section": "",
+    "text": "4.1 Descriptive Capabilities\nWe organise the computational literature on persuasion into three capability classes, ordered by the direction of the information flow relative to the persuasion act:\nDescriptive systems explain the mechanics of persuasion in observed content. The core task is understanding what properties of content correlate with persuasive outcomes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Work in Automated Persuasion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-automated.html#sec-descriptive",
+    "href": "chapters/03-automated.html#sec-descriptive",
+    "title": "4  Types of Work in Automated Persuasion",
+    "section": "",
+    "text": "4.1.1 Content Capabilities\nUnderstanding persuasive content requires parsing three intertwined signals:\n\nContent and Logic\n\nThe quality of arguments, the presence of logical fallacies, the structure of reasoning chains. Computational argumentation mining extracts and classifies these automatically.\n\nAdvertisements\n\nVisual and multimodal persuasion; predicting ad memorability, click-through, and brand recall from image and video features.\n\nEmotion and Affect\n\nSentiment analysis, emotion recognition, and the mapping of affective content to persuasive outcomes across different demographics.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Work in Automated Persuasion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-automated.html#sec-simulative",
+    "href": "chapters/03-automated.html#sec-simulative",
+    "title": "4  Types of Work in Automated Persuasion",
+    "section": "4.2 Simulative Capabilities",
+    "text": "4.2 Simulative Capabilities\nSimulative systems predict how a given person or population will respond to a given message before the message is deployed. This is hard because persuasive effects are moderated by audience characteristics that are rarely directly observed.\nRepresentative lines of work:\n\nCan Language Models Recognise Convincing Arguments? — testing LLMs as judges of argument quality\nMeasuring and Increasing Persuasiveness of Large Language Models [1]\nMemorability prediction from content and context\n\n\n4.2.1 Single Person\nMicro-targeting and personalisation — predicting individual response. Key challenge: the privacy vs. effectiveness trade-off.\n\n\n4.2.2 Interpersonal Interaction\n\n\n\n\n\n\nCaution\n\n\n\nSection under active development.\n\n\n\n\n4.2.3 Societal\n\nPropaganda detection\nPredicting opinion shifts in populations\n\n\n\n4.2.4 Opinion Dynamics\nAgent-based models of belief propagation; echo chambers and filter bubbles.\n\n\n4.2.5 Content Recommendation\nGiven an audience, select the content that maximises a persuasive objective.\n\n\n4.2.6 Audience Selection\nGiven a piece of content, identify the audience for which it will be most persuasive.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Work in Automated Persuasion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-automated.html#sec-generative",
+    "href": "chapters/03-automated.html#sec-generative",
+    "title": "4  Types of Work in Automated Persuasion",
+    "section": "4.3 Generative Capabilities",
+    "text": "4.3 Generative Capabilities\nGenerative systems produce persuasive content optimised for a particular configuration of audience, time, channel, sender, and topic. This is the most powerful — and ethically fraught — capability class.\nLarge language models have dramatically lowered the cost of generating fluent, targeted persuasive text at scale. This raises questions that the research community is only beginning to confront: How persuasive are LLM-generated messages compared to human-written ones? Under what conditions do they outperform human writers? What disclosure obligations do deployers have?\n\n\n\n\n\n\nWarningOpen Ethical Question\n\n\n\nIf an AI system can generate a message that is more persuasive than any human writer could produce, targeted at a single individual, delivered via the channel and at the time of greatest receptivity — what governance structures should constrain its deployment?\n\n\n\n\n\n\n[1] Kumar, Y. et al. 2023. Persuasion strategies in advertisements. Proceedings of the AAAI Conference on Artificial Intelligence. (2023).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Types of Work in Automated Persuasion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-resources.html",
+    "href": "chapters/04-resources.html",
+    "title": "5  Resources for Persuasion Research",
+    "section": "",
+    "text": "Caution\n\n\n\nThis chapter catalogues datasets, benchmarks, and toolkits used in computational persuasion research. It is under active development. Suggest a resource via GitHub Issues.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources for Persuasion Research</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-future.html",
+    "href": "chapters/05-future.html",
+    "title": "6  Future Trends and Unsolved Questions",
+    "section": "",
+    "text": "Micro-targeting at LLM scale — as generation costs approach zero, personalised persuasion will become the norm. What individual rights are at stake?\nMulti-modal persuasion — integrating text, image, audio, and video into unified persuasion models.\nLongitudinal effects — most studies measure immediate attitude change; long-run effects of AI-generated persuasion are almost completely unstudied.\nCross-cultural persuasion — what works in one cultural context often fails in another; LLMs trained predominantly on English data may encode WEIRD (Western, Educated, Industrialised, Rich, Democratic) persuasion norms.\nDetection & provenance — as generative AI scales, detecting AI-generated persuasive content becomes a critical counterbalancing capability.\nRegulation — the EU AI Act and proposed US legislation are beginning to address AI-mediated persuasion; the regulatory landscape is rapidly evolving.\n\n\n\n\n\n\n\nNoteThis Review is Living\n\n\n\nEntries are added and revised as the field evolves. The source and compiled PDF are always available on GitHub. The PDF updates automatically on every commit via GitHub Actions.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Future Trends and Unsolved Questions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/references.html",
+    "href": "chapters/references.html",
+    "title": "7  References",
+    "section": "",
+    "text": "[1] Hare, B. et al. 2000. Chimpanzees know what\nconspecifics do and do not see. Animal Behaviour. 59, 4 (2000),\n771–785.\n\n\n[2] Krebs, J.R. and Dawkins, R. 1984. Animal\nsignals: Mind-reading and manipulation. (1984).\n\n\n[3] Kumar, Y. et al. 2023. Persuasion strategies in\nadvertisements. Proceedings of the AAAI Conference on Artificial\nIntelligence. (2023).\n\n\n[4] Lasswell, H.D. 1971. Propaganda technique\nin world war i. MIT press.\n\n\n[5] Lasswell, H.D. 1948. The structure and function\nof communication in society. The communication of ideas. 37, 1\n(1948), 136–139.\n\n\n[6] Petty, R.E. and Cacioppo, J.T. 1986. The\nelaboration likelihood model of persuasion. Communication and\npersuasion. Springer. 1–24.\n\n\n[7] Shannon, C.E. and Weaver, W. 1949. The\nmathematical theory of communication. University of Illinois\nPress.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References</span>"
+    ]
+  }
+]
