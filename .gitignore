@@ -1,0 +1,10 @@
+_book/
+.quarto/
+*.pyc
+
+.claude/
+CLAUDE.md
+paper-queries.md
+
+/.quarto/
+**/*.quarto_ipynb

@@ -1,0 +1,97 @@
+/*-- scss:defaults --*/
+
+$primary:          #b5451b;
+$link-color:       #1d4ed8;
+$font-family-sans-serif: "Inter", system-ui, sans-serif;
+$font-family-serif: "Lora", Georgia, serif;
+$body-bg:          #faf9f7;
+$body-color:       #1a1a2e;
+$headings-color:   #1a1a2e;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Body text uses serif for reading comfort */
+.quarto-container, #quarto-content, p, li, blockquote {
+  font-family: $font-family-serif;
+  font-size: 1.0125rem;
+  line-height: 1.8;
+}
+
+/* Headings and UI stay sans-serif */
+h1, h2, h3, h4, h5, h6,
+.navbar, .sidebar, .toc,
+.quarto-title, .callout-title,
+button, label, .btn {
+  font-family: $font-family-sans-serif;
+}
+
+/* Chapter titles */
+h1.title { font-size: 2.2rem; font-weight: 700; color: $body-color; }
+h2 { border-bottom: 2px solid $primary; padding-bottom: 0.3rem; display: inline-block; }
+
+/* Sidebar */
+#quarto-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e4e0d8;
+}
+.sidebar-item-text { font-family: $font-family-sans-serif; font-size: 0.85rem; }
+.sidebar-item-section .sidebar-item-text { font-weight: 600; }
+
+/* Navbar */
+.navbar {
+  background: rgba(250,249,247,.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e4e0d8;
+}
+.navbar-brand, .navbar-brand-logo { color: $body-color !important; }
+.nav-link { color: #4a4a6a !important; font-weight: 500; }
+.nav-link:hover { color: $primary !important; }
+
+/* Callouts */
+.callout { border-radius: 6px; }
+.callout.callout-note { border-left-color: $primary; }
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid $primary;
+  background: rgba(181,69,27,.04);
+  padding: 1rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: #4a4a6a;
+}
+
+/* Download PDF button in navbar */
+.nav-link[href$=".pdf"] {
+  background: $primary;
+  color: #fff !important;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.nav-link[href$=".pdf"]:hover { background: #9b3a16; }
+
+/* Cover page */
+#title-block-header { text-align: center; padding: 3rem 0 2rem; }
+.quarto-title-meta { font-family: $font-family-sans-serif; }
+
+/* In-progress sections */
+.callout-caution .callout-title::before { content: "🚧 "; }
+
+/* Living review badge */
+.living-badge {
+  display: inline-block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $primary;
+  background: rgba(181,69,27,.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}

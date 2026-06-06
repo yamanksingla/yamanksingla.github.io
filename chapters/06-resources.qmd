@@ -1,0 +1,662 @@
+---
+title: "Resources for Persuasion Research"
+description: "Curated datasets, benchmarks, models, and tools for computational persuasion research. Includes argumentation corpora, ad effectiveness datasets, LLM persuasion benchmarks, personalisation frameworks, and simulation environments for studying influence at scale."
+---
+
+::: {.callout-note}
+## Chapter Overview
+This chapter catalogues the datasets, benchmarks, simulation environments, and
+computational tools available to persuasion researchers. Resources are grouped
+by type: text corpora and argument quality benchmarks; multimodal advertising
+and emotion datasets; eye-tracking and attention corpora; social media and
+behavioural datasets; pre-trained models relevant to persuasion tasks; and
+simulation environments. Each entry includes the resource's scope, size where
+known, the primary task it was designed for, and known limitations for persuasion
+research.
+:::
+
+::: {.callout-caution}
+## Living chapter
+Entries are added as the field evolves. To suggest a resource, open an issue on
+[GitHub](https://github.com/yamanksingla/yamanksingla.github.io/issues).
+:::
+
+Computational persuasion research sits at the intersection of natural language
+processing, computer vision, social psychology, and behavioural economics. Each
+of those fields has produced its own data infrastructure, and those datasets were
+rarely designed with persuasion as the primary target. The result is a fragmented
+resource landscape: strong coverage of some phenomena (argument structure,
+sentiment, eye movements during reading) and almost none for others (longitudinal
+attitude change, cross-cultural message effectiveness, behavioural outcomes of
+AI-generated content). This chapter maps what exists and where the gaps are.
+
+## Text Corpora and Argument Quality {#sec-text-data}
+
+### Argument Mining Datasets
+
+**What makes a convincing argument** [@habernal2016makes] is the foundational
+dataset for computational argument quality research. Habernal and Gurevych
+collected 16,000 argument pairs from online debate platforms (ConvinceMe.net,
+iDebate.org, CreatedDebate.com), crowd-annotated for relative convincingness.
+Each pair presents two arguments on the same topic; annotators judged which was
+more convincing and why. The corpus also includes 9,111 argumentative sentences
+annotated for 15 attributes of convincingness, including specificity, emotional
+appeal, and use of evidence. Limitation: convincingness ratings are from
+crowdworkers reading in an artificial comparison context, not from people who
+were actually persuaded to change a position.
+
+**Persuasion of the Undecided** [@longpre2019persuasion] focuses on a
+practically important population: individuals who report no strong position on
+a debate topic. The dataset contains crowd-annotated argument pairs from the
+same debate platforms, filtered for pairs involving undecided evaluators. Because
+persuasion of the already-committed is structurally different from persuasion
+of the undecided, this resource targets a distinct phenomenon.
+
+**What makes a convincing argument: Cross-Lingual** [@barrett-etal-2016-cross]
+extends the Habernal and Gurevych framework to German, providing one of the
+few argument quality datasets outside English. The corpus enables, at least
+in principle, cross-lingual comparisons of argument strength, though the
+translational mapping of persuasive norms across languages is itself an
+open research question.
+
+**CMV (Change My View) corpus** from Reddit [@tan2016winning] contains 3,461
+OP-reply pairs from the r/ChangeMyView subreddit, where the original poster
+(OP) explicitly asked to have their view challenged. The key annotation is
+whether the OP subsequently awarded a delta (acknowledging their view was
+changed). This makes it one of the few large-scale datasets where actual
+attitude change, rather than rated convincingness, is the outcome variable.
+Tan and colleagues showed that stylistic features, use of hedges, argument
+length, lexical diversity, and specific discourse markers, predict delta awards.
+Limitation: the CMV population is self-selected for willingness to be persuaded,
+and delta awards measure acknowledgement of a good argument rather than
+durable belief change.
+
+**ChangeMyView Threads** [@durmus-cardie-2018-exploring] extend the basic
+CMV resource by including full thread structure, enabling analysis of how
+the social dynamics of a discussion thread (who responds, in what order,
+with what framing) affect persuasive outcomes beyond argument content alone.
+
+**Argument quality annotations** [@stab2014annotating; @stab2017parsing]
+from Stab and Gurevych provide a 402-essay corpus with fine-grained annotation
+of argument components (major claim, claim, premise) and argumentative relations
+(support, attack). The corpus enables training and evaluation of systems that
+identify argument structure rather than just argument quality. Limitation: essays
+were written by students and crowdworkers under controlled conditions; the
+argument structure of spontaneous persuasive speech or social media is
+substantially messier.
+
+**Debate speech persuasion** — the IBM Project Debater datasets
+[@wachsmuth2017computational; @hadoux2021strategic] provide argumentative essays
+and structured debate transcripts with quality and persuasiveness annotations.
+Several of these datasets include *listening audience* persuasion scores, making
+them closer to a ground-truth persuasion signal than crowdworker quality ratings.
+
+### Social Media and Propagation
+
+**Reddit corpus** [@baumgartner2020pushshift] via Pushshift provides a
+comprehensive snapshot of Reddit (posts, comments, scores, metadata) across
+all subreddits from Reddit's founding through the collection date. At petabyte
+scale, this is the largest publicly available corpus of human discussion online.
+For persuasion research it enables analysis of: upvote dynamics, comment framing,
+community norm transmission, and longitudinal linguistic patterns across communities.
+Limitation: Reddit's demographic skew (predominantly male, English-speaking,
+Western) limits generalisability.
+
+**Enron email corpus** [@klimt2004enron] contains approximately 600,000 emails
+from 158 employees of the Enron Corporation, including internal communications
+that span normal business correspondence, persuasive exchanges, and crisis
+communication under legal and commercial pressure. It remains a standard
+benchmark for email classification and, more broadly, for studying persuasion
+in professional contexts. Limitation: data is from a single organisation
+under extraordinary circumstances (a corporate fraud case); the communication
+patterns may not generalise.
+
+**Twitter retweet prediction** [@wang2018retweet; @petrovic2011rt] datasets
+link tweet content and social features to propagation outcomes. Retweet count
+is a noisy proxy for persuasiveness (content spreads for reasons unrelated
+to belief change), but propagation datasets are among the few resources that
+connect message content to real-world dissemination behaviour at scale.
+
+**ChangeMyView with linguistic cues** [@danescu2012you; @danescu2012echoes] —
+Danescu-Niculescu-Mizil and colleagues studied how linguistic accommodation
+and memorable phrasing predict conversational outcomes. These corpora, while
+not exclusively about persuasion, are standard references for the study of
+how language form, syntax, register, and hedging, shapes social influence alongside content.
+
+### Language Generation and Quality
+
+**BooksCorpus** and **Common Crawl** (used in pre-training BERT [@devlin2019bert]
+and GPT-3 [@brown2020language]) yield pre-trained models that form the backbone
+of most contemporary computational persuasion systems. Understanding what these
+corpora contain, and what they over-represent, is relevant for understanding
+the biases in downstream persuasion models.
+
+**Social Chemistry 101** [@forbesetal2020social] contains 292,000 rules of thumb
+describing social norms ("it's rude to interrupt someone") with 4.5 million
+human judgements on situational variation. This resource enables modelling of
+norm-based persuasion: arguments that appeal to social expectations rather than
+factual evidence.
+
+---
+
+## Multimodal Advertising and Emotion {#sec-multimodal-data}
+
+### Advertising Datasets
+
+**Hussain et al. (2017) Advertisement Dataset** [@hussain2017automatic] contains
+64,832 image advertisements from Ads of the World, annotated for sentiment,
+topic, and persuasion strategy. It is the largest publicly available image
+advertising corpus, and the annotations include persuasion strategy labels
+derived from Aristotle's three appeals (ethos, pathos, logos), making it
+directly relevant to classical persuasion theory. Limitation: images only,
+no video; annotations were produced by a small expert panel.
+
+**ADVISE (Symbolism and External Knowledge)** [@ye2018advise] provides
+3,587 advertisements annotated for symbolic content: the non-literal visual
+associations that carry persuasive meaning (a car advertisement showing a
+mountain road evokes freedom, not geography). Symbolic annotation requires
+cultural knowledge; the dataset reflects primarily Western advertising norms.
+
+**Visual Rhetoric in Advertisements** [@ye2019interpreting] annotates a subset
+of advertisements for rhetorical figures, metaphor, hyperbole, and irony, in
+visual form. A visual metaphor argues analogically through juxtaposition of
+two unlike images; the dataset enables training systems to recognise this
+fundamentally persuasive structure.
+
+**M2P2: Multimodal Persuasion Prediction** [@bai2021m2p2] pairs image, text,
+and audio features from advertisements with crowd-rated persuasiveness scores.
+The dataset covers 535 distinct advertisements across a range of product
+categories, with ratings from Amazon Mechanical Turk workers. M2P2 is currently
+the most complete multimodal persuasion benchmark available, enabling systematic
+comparison of unimodal versus multimodal persuasion models. Limitation: ratings
+measure predicted persuasiveness rather than actual behaviour change; the rater
+pool is WEIRD-skewed.
+
+**Image and Text Persuasion** [@zhang2018equal] provides experimental data on
+how the relationship between image and text in an advertisement affects overall
+persuasive impact. The key finding, that redundant image-text pairs are less
+persuasive than complementary ones, is supported by the corpus and has direct
+implications for automated advertisement generation.
+
+**Audio Persuasion** [@singla2022audio] extends persuasion analysis to the
+acoustic channel, examining how prosodic features, speaking rate, and vocal
+affect modulate the persuasive impact of spoken messages.
+
+**A Video Is Worth 4096 Tokens** [@bhattacharyya2023video] addresses the
+bottleneck of video analysis at scale by verbalising advertisement videos into
+coherent text narratives using a pipeline of keyframe captioning (BLIP-2), OCR,
+automatic speech recognition, and brand metadata retrieval, followed by LLM-based
+story synthesis. The resulting text stories are evaluated on five benchmark
+datasets across fifteen video understanding tasks — emotion classification, topic
+classification, and persuasion strategy identification. The paper also releases
+the first annotated dataset of persuasion strategies in video advertisements.
+The zero-shot approach outperforms supervised video understanding baselines on
+four of the five datasets.
+
+### Emotion Datasets
+
+**International Affective Picture System (IAPS)** [@mikels2005emotional] contains
+1,182 standardised emotional images rated on valence, arousal, and dominance by
+US undergraduate samples. IAPS is the oldest and most widely cited emotional
+image database; it has been used as a reference standard for affective computing
+for over three decades. Limitation: images are dated (many from the 1990s),
+the sample is exclusively American, and the valence/arousal/dominance model
+captures only a fraction of emotional complexity.
+
+**EmoSet** [@yang2023emoset] is a large-scale visual emotion dataset containing
+3.3 million images annotated with eight discrete emotion categories (amusement,
+awe, contentment, excitement, anger, disgust, fear, sadness), brightness,
+colorfulness, scene type, and object presence. The dataset was constructed
+to enable models that connect low-level visual features to high-level emotional
+responses, with a scope three orders of magnitude larger than IAPS.
+
+**eMotions** [@wu2023emotions] focuses on short video clips, providing frame-level
+and clip-level emotion annotations across a large corpus of social media video.
+For persuasion research, short-form video is increasingly the dominant format
+for political advertising, public health messaging, and commercial persuasion.
+
+**BAM! (Behance Artistic Media)** [@wilber2017bam] provides semantic and
+emotional annotations of artistic images, enabling the study of persuasive
+communication in non-photographic, stylised visual content. It is particularly
+relevant for branded content and design-driven advertising.
+
+**Affect in images and text** [@machajdik2010affective] provides colour and
+texture feature annotations linked to emotional response, grounding affective
+computing models in low-level visual properties.
+
+### Behaviour-Signal Advertising Datasets
+
+The datasets above primarily annotate *content features* of persuasive material.
+A complementary line of work uses real behavioural outcomes, clicks, likes,
+and engagement, as labels, connecting message features to audience response.
+
+**Persuasion Strategies in Advertisements** [@kumar2023persuasion] provides a
+taxonomy of 21 persuasion strategies used by brands, appeals to authority,
+social proof, scarcity, reciprocity, analogical reasoning, among others,
+together with a large image advertisement dataset annotated with those strategy
+labels. The annotation scheme is derived from marketing and rhetoric literature
+and applied to advertisements collected from public platforms. The dataset is
+used as a ground-truth resource in several downstream works on automatic
+persuasion strategy identification in video [@bhattacharyya2023video].
+
+**BoigBench** [@khurana2023boig] is a benchmark for behaviour-optimised image
+generation, containing advertisement images paired with real engagement signals
+(likes, shares, click-through rates) collected from social media. It supports
+evaluation of generative models on the task of producing images predicted to
+drive higher user engagement. Two baseline models accompany the benchmark:
+BoigLLM, which conditions a language model on engagement history to select
+among candidate images, and BoigSD, a Stable Diffusion variant fine-tuned with
+engagement as the reward signal.
+
+**ALPHA / ALPHA50M** [@bhattacharyya2025alpha] aligns LLMs to advertisement
+engagement data. ALPHA is trained on engagement signals, likes, comments,
+and shares, collected from real social media ad campaigns, producing a model that
+predicts and generates content optimised for behavioural response rather than
+human preference ratings. ALPHA50M extends this to 50 million ad-engagement
+pairs. The approach introduces *behavioural alignment* as distinct from standard
+RLHF: the reward signal comes from observed audience behaviour rather than
+human annotator preferences.
+
+**SPRO (Self-Play Reward Optimisation)** [@jha2025spro] applies self-play
+reinforcement learning to diffusion-based image generation, using ad engagement
+data as the reward. The method alternates between generating candidate images
+and selecting higher-performing outputs via a reward model trained on behavioural
+data, progressively improving the engagement profile of generated advertising
+images over standard supervised fine-tuning baselines.
+
+**MEMENTO** [@ojha2026memento] uses web-scale data (web pages, their
+associated advertisements, and implicit engagement signals from web interactions)
+as a learning signal for low-data advertising domains. The approach does not
+require manually annotated training sets for each new domain; instead, the model
+learns domain-appropriate content features from the distribution of web content
+encountered in natural browsing. Particularly relevant for advertisers in
+specialised verticals where labelled ad-engagement data is scarce.
+
+---
+
+## Eye-Tracking and Attention {#sec-eyetracking}
+
+Eye movements during reading and scene viewing provide a window into cognitive
+processing that self-reports cannot. For persuasion research, eye-tracking
+data reveals what receivers actually attend to, distinct from what they report
+attending to.
+
+### Reading Corpora
+
+**Dundee Corpus** contains eye movements from 10 participants reading 20
+newspaper articles (~51,000 words), recorded with full-paragraph context. It
+is a standard benchmark for models predicting reading time as a function of
+linguistic features (frequency, surprisal, syntactic complexity). Reading time
+is a proxy for processing effort, which in turn predicts encoding depth.
+
+**Provo Corpus** [@luke2018provo] provides eye-tracking and self-paced reading
+data for 55 texts (~2,700 words each), with cloze probability norms for each
+word position. Its combination of oculomotor data and predictability norms makes
+it the richest available resource for studying how expectation violation
+(a core mechanism of persuasive surprise) affects processing.
+
+**CELER** [@berzak2022celer] contains 365 participants reading 5,000 sentences
+in both native English and as L2 English learners, with concurrent eye-tracking.
+Its scale enables statistical modelling of individual differences in reading,
+relevant for personalised persuasion research that wants to account for
+varying processing depths across recipients.
+
+**CMCL Shared Task Corpora** [@hollenstein2022cmcl; @hollenstein-etal-2021-cmcl]
+provide eye-tracking data integrated with NLP benchmarks, enabling direct
+comparison of human reading patterns with model attention patterns.
+
+### Scene Viewing and Advertisement Attention
+
+**Human Attention in Image Captioning** [@he2019human] links eye-tracking data
+during image captioning to the saliency maps produced by neural captioning
+models. For persuasion, the dataset enables analysis of whether model attention
+aligns with human attention during the processing of complex visual scenes.
+
+**Scanpath datasets** — **ScanGAN360** [@ScanGAN360], **ScanpathNet**
+[@de2022scanpathnet], and **ScanPathApp1** provide scanpath (sequence of
+fixations over time) data during scene viewing, enabling models that predict
+where people look, in what order, and for how long. Scanpath
+prediction is relevant to understanding the temporal unfolding of attention
+during advertisement processing.
+
+**Eye-tracking in NLP benchmarks** — the ZuCo [@hollenstein2019advancing]
+and related datasets provide simultaneous EEG and eye-tracking during reading
+of sentences with various complexity levels. These enable study of neural
+processing correlates of linguistic difficulty, with implications for
+message design.
+
+**Gaze embeddings for zero-shot classification** — Karessli et al. [-@karessli2017gaze] demonstrate
+that eye-tracking patterns during image viewing carry semantic information
+sufficient for zero-shot object recognition, evidence that gaze data encodes
+meaningful representations of visual attention that go beyond simple saliency.
+
+---
+
+## Social Science and Behavioural Datasets {#sec-social-data}
+
+### Survey and Panel Data
+
+**American National Election Studies (ANES)** — the ANES has conducted
+pre- and post-election panel surveys of American voters since 1948. The 2012,
+2016, and 2020 waves have been used to validate LLM simulation of political
+attitude distributions [@argyle2023out]. For persuasion research, ANES provides
+the most carefully constructed longitudinal measurement of political attitude
+change available for the US context. Limitation: US-only, biennial measurement
+intervals, and the survey instrument was designed for political science rather
+than persuasion research.
+
+**Change My View delta corpus** — described above (@sec-text-data); the key
+behavioural feature is the explicit acknowledgement of persuasion by the OP.
+
+**Chatbot Arena** [@chiang2024chatbot] provides human preference ratings of
+LLM outputs across a wide range of tasks and topics, collected through a
+pairwise comparison interface (users interact with two anonymous models
+simultaneously and judge which they prefer). The dataset is not specifically
+about persuasion, but it is the largest available dataset of human preference
+ratings over LLM-generated content, and preference is one signal of persuasive
+effectiveness.
+
+### Experimental Persuasion Records
+
+Several large-scale field experiment datasets bear on persuasion effectiveness,
+though none was designed as a general benchmark:
+
+**Voter mobilisation experiments** — GOTV (Get Out The Vote) field experiments
+have produced a large literature on what contact methods and message frames
+increase voter turnout. The key datasets are embedded in meta-analyses
+[@gerber2016field] rather than publicly released individual-level files, but
+the literature provides strong effect size estimates for canvassing, phone banking,
+and mail relative to control conditions.
+
+**Deep canvassing** [@broockman2024can] — Broockman, Kalla and colleagues ran
+randomised field experiments demonstrating that extended, non-judgmental
+conversation (deep canvassing) produced durable attitude change on transgender
+rights that persisted at 3-month follow-up. The dataset demonstrates that
+real-world, long-duration persuasive interventions can produce effects that
+standard laboratory paradigms rarely capture.
+
+---
+
+## Pre-Trained Models and APIs {#sec-models}
+
+The following computational models are the primary infrastructure for persuasion research.
+
+### Language Models
+
+**GPT-3 / GPT-4** [@brown2020language; @openai2023gpt4] — the GPT family from
+OpenAI is currently the most widely used infrastructure for LLM-based persuasion
+experiments, simulation studies, and automated message generation. GPT-4
+specifically has been used by @broockman2024can to predict persuasion experiment
+outcomes and by multiple groups to generate personalised persuasive messages for
+controlled experiments. Accessible via the OpenAI API.
+
+**LLaMA / Vicuna** [@touvron2023llama; @vicuna2023] — open-weight alternatives
+to the GPT family, enabling local deployment and fine-tuning on domain-specific
+persuasion corpora without API dependency. The LLaMA-family models have been
+used in persuasion research where full access to model internals (activations,
+logit distributions) is required.
+
+**BERT** [@devlin2019bert] — the standard encoder model for classification tasks
+in NLP, including argument quality classification, stance detection, and
+persuasion strategy identification. Fine-tuned BERT variants remain competitive
+on most persuasion classification benchmarks.
+
+**T5 / Flan-T5** [@raffel2020exploring; @chung2022scaling] — the text-to-text
+framework enables unified treatment of persuasion classification and generation
+tasks. Instruction-tuned Flan-T5 models perform well on argument quality
+benchmarks without task-specific fine-tuning.
+
+**LCBM (Large Content and Behavior Models)** [@kumar2024large] — a framework
+proposed specifically for modelling the relationship between content and
+downstream behavioural response. Unlike the general-purpose models above,
+LCBM explicitly targets the link between message features and audience behaviour,
+making it the closest currently available model to a persuasion-specific
+foundation model.
+
+**LaMP (Language Model Personalization benchmark)** [@salemi2023lamp] provides
+seven personalised NLP tasks spanning classification (citation identification,
+news categorisation, product rating) and generation (headline writing, scholarly
+title generation, email subject generation, tweet paraphrasing). Each task
+pairs task inputs with a user profile (that user's prior outputs) and
+evaluates how well LLMs adapt to individual style and preference. LaMP is the
+current standard benchmark for personalised generation, using retrieval
+augmentation as the personalisation mechanism and reporting user-based and
+time-based data splits.
+
+**FSPO (Few-Shot Preference Optimization)** [@singh2025fspo] frames LLM
+personalisation as a meta-learning problem: given a small set of labelled
+preference pairs from a new user, the model rapidly constructs a personalised
+reward function and generates responses aligned with that user's preferences.
+FSPO is trained on over one million synthetic personalised preferences spanning
+three domains and achieves strong performance on held-out user evaluation. It
+addresses a structural weakness of standard RLHF, that aggregating preferences
+across all users loses individual variation, which is directly relevant to
+personalised persuasive message generation.
+
+**Transsuasion / PersuasionBench** [@singh2024transsuasion] introduces the task
+of *transsuasion*: given a low-performing tweet, rewrite it to achieve the
+engagement level of a high-performing semantically equivalent tweet by the same
+author, transferring persuasive impact while preserving content. PersuasionBench
+pairs tweets written by the same user on the same topic where one version
+received significantly more engagement. The companion PersuasionArena evaluates
+LLMs on this and related persuasiveness tasks, demonstrating that persuasive
+ability scales with model size and that smaller LLMs can be brought to parity
+with larger ones through targeted fine-tuning.
+
+**Behavior-LLaVA** [@singh2025behaviorllava] fine-tunes a vision-language model
+on human behavioural signals, video replay graphs, likes, and comments, rather
+than on human-annotated captions or preference labels. Training on behavioural
+outcomes teaches the model which visual and semantic features drive viewer
+engagement, producing representations that transfer to downstream content
+understanding tasks (emotion recognition, persuasion strategy detection) with
+improved accuracy over caption-supervised baselines.
+
+### Vision-Language Models
+
+**BLIP-2** [@li2023blip2] enables querying of image content in natural language,
+enabling structured annotation of visual persuasive elements (what is shown,
+what emotion is evoked, what claim is implied) at scale. Relevant for
+large-scale analysis of advertising corpora.
+
+**VideoChat** [@li2023videochat] extends BLIP-style vision-language interaction
+to video, enabling natural-language querying of video advertisement content.
+This is relevant for the emerging literature on video persuasion, where manual
+annotation at scale has been the bottleneck.
+
+**Segment Anything (SAM)** [@kirillov2023segment] and **Track Anything**
+[@yang2023track] provide universal segmentation for images and video, enabling
+identification of objects, faces, and text regions within advertising content
+without task-specific training.
+
+### Multimodal Processing Tools
+
+**PySceneDetect** [@breakthrough-pyscenedetect] — a Python library for
+automated detection of scene cuts and transitions in video. For persuasion
+research, scene-cut detection is a prerequisite for analysing video
+advertisement structure (number of cuts per second is a standard measure
+of production intensity linked to emotional engagement).
+
+**GMFlow** [@xu2022gmflow] — optical flow estimation for video, enabling
+quantification of motion dynamics within scenes. High optical flow correlates
+with arousal and attention capture in advertising research.
+
+**PP-OCR** [@du2020ppocr] — lightweight text detection and recognition for
+images and video. Advertising content frequently embeds text overlays; OCR
+enables this text to be extracted and analysed alongside the visual channel.
+
+**U2-Net** [@qin2020u2] — salient object detection, identifying the primary
+visual subject of an image. Saliency and persuasive intent are related:
+advertisements are designed to direct attention to specific elements.
+
+---
+
+## Simulation Environments {#sec-simulation-envs}
+
+### LLM-Based Population Simulation
+
+**Silicon sampling** [@argyle2023out] — rather than a packaged tool, this is
+a methodology: conditioning LLMs on demographic profiles and using the
+resulting outputs as synthetic survey responses. Argyle and colleagues
+demonstrate the approach using GPT-3 conditioned on ANES respondent profiles,
+validating against real survey distributions. The methodology is available
+for replication; the key parameter choices (conditioning prompt structure,
+model temperature, validation procedure) are documented in the paper.
+
+**Generative Agents** [@park2023generative] — a simulation environment in
+which 25 LLM-powered agents live in a small-town setting, with persistent
+memory, daily schedules, and social relationships. Agents produce emergent
+collective behaviours (organising a party, running an election) without
+explicit programming. For persuasion research, the environment enables
+study of how information spreads through a social network, how agents
+update beliefs based on peer communication, and how persuasive interventions
+propagate through a simulated community. Code is open-source on GitHub.
+
+**OASIS** [@yang2025oasis] is a scalable open-source social media simulator
+supporting up to one million LLM-based agents, designed to replicate the
+dynamics of platforms such as X (formerly Twitter) and Reddit. Agents have
+persistent profiles, a dynamically updated information environment, and diverse
+action spaces (post, like, share, follow). The simulator has been used to study
+information spreading, group polarisation, and herd effects at a scale
+impossible with human participants. For persuasion research, OASIS provides
+the closest available approximation to a full social media information
+environment: a controlled setting where the researcher can inject a message,
+observe cascade dynamics, and measure attitude shifts across a large synthetic
+population.
+
+**Social Agents: Collective Intelligence** [@bhattacharyya2025social] — a
+multi-agent framework in which a diverse population of LLM personas, each
+instantiated with systematically varied demographic and psychographic profiles,
+independently responds to a stimulus (advertisement, message, policy proposal),
+with aggregate predictions outperforming any single model on behavioural outcome
+tasks. As a simulation environment for persuasion, it functions as a
+heterogeneous audience simulator: a sender can test a message against a
+synthetic population before deployment, observing how predicted engagement and
+attitude-shift vary across demographic subgroups.
+
+**AI Psychometrics simulation** [@pellert2023ai] — Pellert and colleagues
+demonstrate that standard psychological inventories (Big Five, moral foundations,
+social value orientation) can be administered to LLMs, producing stable
+psychological profiles that vary by model and by prompt conditioning. The
+framework enables systematic exploration of how LLM "personality" interacts
+with persuasive message design.
+
+**Pressman et al. simulacra** [@pressman2023simulacra] — a framework for
+using LLMs as proxies for specific demographic groups in persuasion experiments,
+with explicit attention to the validity conditions under which LLM responses
+correspond to human responses.
+
+### Agent-Based Models
+
+**Axelrod's tournament** [@axelrod1984evolution] — the original computer
+tournament for iterated Prisoner's Dilemma strategies is reproducible with
+standard software (Python axelrod library). While not a persuasion environment
+per se, it is the foundational simulation environment for studying the evolution
+of cooperative signalling, the theoretical basis of honest communication.
+
+**Agent-based social simulation** [@bankes2002agent] — the broader class of
+agent-based models (ABMs) used in computational social science, implemented
+in platforms such as NetLogo and Mesa (Python). For persuasion, ABMs enable
+study of opinion dynamics, information cascade, and norm propagation in
+networks with controlled structure. Standard models include the bounded
+confidence model and the DeGroot model of opinion averaging.
+
+---
+
+## Evaluation Frameworks and Metrics {#sec-metrics}
+
+### Argument Quality Metrics
+
+Standard NLP evaluation metrics, BLEU [@papineni2002bleu], METEOR
+[@banerjee2005meteor], and BERTScore, are used for argument generation
+evaluation but are poorly calibrated to persuasive quality. A generated
+argument can be fluent and similar to a reference argument while being
+entirely unpersuasive, and vice versa. Habernal and Gurevych's
+convincingness rankings [@habernal2016makes] and the delta rate on CMV
+[@tan2016winning] are the most widely used task-specific metrics for
+argument persuasiveness.
+
+### Dialogue and Persuasion Metrics
+
+**LLM-as-judge** [@zheng2024judging] — using a strong LLM (GPT-4) to rate
+the quality of outputs from weaker models has become a standard evaluation
+approach. For persuasion, LLM judges can assess message fluency, coherence,
+and apparent persuasive intent, but there is no validated evidence that
+LLM-rated persuasiveness correlates with actual human attitude change.
+
+**Human preference ratings** [@chiang2024chatbot] — pairwise preference
+rating by human annotators is the most valid available proxy for persuasive
+effectiveness, short of measuring actual attitude or behaviour change. The
+Chatbot Arena methodology is the current standard for large-scale human
+preference evaluation of LLM outputs.
+
+### Long-Term Memorability
+
+**Video memorability** [@s2024longterm; @cohendet2019videomem] datasets
+annotate videos for long-term memory retention: how likely is a viewer to
+remember this clip at a 1-week delay? Memorability is related to, but distinct
+from, persuasiveness: a memorable advertisement is more likely to influence
+future purchase decisions, but a highly memorable message may be memorable
+precisely because it is surprising or disturbing rather than because it changed
+a belief.
+
+**LAMBDA (Long-term Ad Memorability Dataset)** [@si2024lambda] provides
+long-term memorability scores for 2,205 multimodal advertisements from 276
+brands, collected from 1,749 participants in two-stage sessions with at least
+a one-day gap between exposure and recall. The dataset distinguishes brand
+recall from ad recognition, separating short-term recognisability from the
+long-term memory traces relevant to purchase-funnel effects. The accompanying
+model, Henry, integrates visual, cognitive, and world-knowledge representations
+to predict memorability. A companion dataset, UltraLAMBDA, scales to 5 million
+ads with automatically assigned memorability scores.
+
+**ToT2Mem** [@bhattacharyya2025tot2mem] collects memorability signal at scale
+from Tip-of-the-Tongue retrieval queries on Reddit: posts where users describe
+content they half-remember but cannot identify. Over 470,000 content-recall
+pairs spanning multiple modalities are extracted from this unsupervised source,
+removing the scalability bottleneck of laboratory memorability studies.
+ToT2Mem-Video is an 82,500-pair video-recall subset. Fine-tuned VLMs on this
+dataset outperform GPT-4o on descriptive recall generation.
+
+### Behaviour-Based Engagement Metrics
+
+**Click-through rate (CTR) and engagement rate** are the primary outcome
+variables in digital advertising research. CTR measures the fraction of
+content impressions resulting in a user click; engagement rate aggregates
+downstream interactions (likes, shares, comments, saves). CREATER [-@wei2022creater] demonstrates a contrastive learning approach that trains
+content generation models directly on A/B test data, using CTR differences
+between content variants as the training signal rather than human preference
+labels. The approach treats behavioural A/B data as implicit pairwise
+preference data and constructs a loss that pushes the model toward generating
+content similar to high-CTR variants and away from low-CTR variants. For
+persuasion research, CREATER introduces a blueprint for converting the vast
+stores of platform A/B test data into training signal for persuasive content
+generation.
+
+---
+
+## Summary: Coverage and Gaps
+
+The table below maps available resources against the major research questions
+in computational persuasion. A tick indicates at least one well-validated
+resource; a dash indicates significant gap.
+
+| Research question | Available resources | Gap |
+|---|---|---|
+| Argument quality (text) | CMV, Habernal, Stab | ✓ adequate for English |
+| Attitude change (real-world) | CMV deltas, GOTV field exps | Gap: no large-scale randomised dataset |
+| Multimodal persuasion | M2P2, Hussain ads, IAPS | Gap: no behavioural outcomes |
+| Longitudinal effects | ANES (coarse), deep canvassing | Gap: no content-linked panel |
+| Cross-cultural | CMV cross-lingual, CELER L2 | Gap: no matched cross-cultural benchmark |
+| LLM-mediated persuasion | Chatbot Arena, LaMP, FSPO, PersuasionBench | PersuasionBench nascent; no cross-platform benchmark |
+| Simulation validity | Argyle, Pellert, Park, Social Agents | Gap: validation against real behaviour |
+| Detection of AI content | — | Gap: no large labelled corpus |
+| Video persuasion | M2P2, eMotions, LAMBDA, BoigBench, EMNLP-4096 | Partial: engagement signals available; no attitude-change measurement |
+| Eye-tracking + persuasion | ZuCo, Provo, CELER | Gap: ad-specific attention corpora |
+
+: Coverage of major persuasion research questions by available resources. {#tbl-resource-coverage}
+
+The two most consequential gaps are the absence of a large-scale dataset linking
+persuasive content to real behavioural outcomes, and the absence of a
+provenance-labelled corpus of AI-generated persuasive content. Both are
+prerequisites for the research frontiers described in @sec-longitudinal and
+@sec-detection of Chapter 7.

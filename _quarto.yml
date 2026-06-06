@@ -1,0 +1,93 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Persuasion via Man and Machine"
+  subtitle: "A Living Review"
+  description: "A living review of the science and engineering of persuasion — from evolutionary biology and costly signalling to large language models. Covers computational persuasion, attitude change, NLP benchmarks, and AI-generated content at scale."
+  author:
+    - name: Yaman Kumar Singla
+      email: dr.yamankumar@gmail.com
+  date: last-modified
+  date-format: "MMMM YYYY"
+  site-url: "https://yamanksingla.github.io"
+  repo-url: https://github.com/yamanksingla/yamanksingla.github.io
+  repo-actions: [edit, issue]
+  cover-image: cover.png
+  open-graph:
+    title: "Persuasion via Man and Machine"
+    description: "A living review of the science and engineering of persuasion — from evolutionary biology to large language models."
+    image: cover.png
+  twitter-card:
+    title: "Persuasion via Man and Machine"
+    description: "A living review of the science and engineering of persuasion — from evolutionary biology to large language models."
+    image: cover.png
+    card-style: summary_large_image
+
+  chapters:
+    - index.qmd
+    - chapters/01-introduction.qmd
+    - chapters/02-evolution.qmd
+    - chapters/05-digital-revolution.qmd
+    - chapters/06-resources.qmd
+    - chapters/07-future.qmd
+    - chapters/references.qmd
+
+  navbar:
+    right:
+      - icon: globe
+        href: https://sites.google.com/view/yaman-kumar/
+      - icon: github
+        href: https://github.com/yamanksingla/yamanksingla.github.io
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yaman-kumar/
+      - icon: envelope
+        href: mailto:dr.yamankumar@gmail.com
+
+  sidebar:
+    style: docked
+    background: light
+
+  downloads: [pdf]
+
+lang: en
+
+format:
+  html:
+    theme: [cosmo, custom.scss]
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    comments:
+      hypothesis: true
+
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrbook
+    classoption: [11pt, a4paper, oneside]
+    geometry:
+      - top=30mm
+      - left=28mm
+      - right=28mm
+      - bottom=30mm
+    fontsize: 11pt
+    linestretch: 1.4
+    toc: true
+    number-sections: true
+    colorlinks: true
+    latex-auto-install: false
+    include-in-header:
+      text: |
+        \usepackage{microtype}
+        \hypersetup{
+          pdftitle={Persuasion via Man and Machine: A Living Review},
+          pdfauthor={Yaman Kumar Singla},
+          pdfsubject={Computational persuasion, NLP, evolutionary biology of communication, LLMs},
+          pdfkeywords={persuasion, large language models, computational persuasion, attitude change, evolutionary biology, costly signalling, NLP, AI-generated content}
+        }
+
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/acm-sig-proceedings.csl

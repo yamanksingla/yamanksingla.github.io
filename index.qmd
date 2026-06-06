@@ -1,0 +1,46 @@
+---
+title: "Persuasion via Man and Machine"
+subtitle: "A Living Review"
+description: "A living review of the science and engineering of persuasion — from evolutionary biology and costly signalling to large language models. Covers computational persuasion, NLP benchmarks, attitude change, and AI-generated influence at scale."
+author:
+  - name: Yaman Kumar Singla
+    email: dr.yamankumar@gmail.com
+date: last-modified
+---
+
+::: {.living-badge}
+Living Review · Draft
+:::
+
+This is a **living review** — entries are continuously added and revised as the field evolves.
+The LaTeX source, bibliography, and compiled PDF are always available on [GitHub](https://github.com/yamanksingla/yamanksingla.github.io).
+Readers are encouraged to [open an issue](https://github.com/yamanksingla/yamanksingla.github.io/issues) to suggest missing work. See also [Behavior in the Wild](https://behavior-in-the-wild.github.io/), a collection of closely related work exploring persuasion and human behavior in real-world settings outside controlled laboratory environments.
+---
+
+## Abstract
+
+This living review synthesises the science and engineering of persuasion across
+five millennia of scholarship and across the disciplinary boundaries that have
+kept the field fragmented — rhetoric, psychology, linguistics, political science,
+marketing, and artificial intelligence. We argue that persuasion is best understood
+as the optimisation of the effect of a message on a receiver, and that machine
+learning is now a fully-fledged participant in that optimisation — as an instrument,
+as an object of study, and as a threat.
+
+Because this is a living review, entries are added and revised continuously.
+Readers are encouraged to [open an issue](https://github.com/yamanksingla/yamanksingla.github.io/issues)
+on GitHub to suggest missing work.
+
+---
+
+## How to Cite
+
+```
+@misc{singla2025persuasion,
+  author    = {Singla, Yaman Kumar},
+  title     = {Persuasion via Man and Machine: A Living Review},
+  year      = {2025},
+  url       = {https://yamanksingla.github.io},
+  note      = {Living review, continuously updated}
+}
+```

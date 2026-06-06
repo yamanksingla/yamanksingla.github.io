@@ -1,0 +1,255 @@
+---
+title: "Introduction"
+description: "Why persuasion is the central unsolved problem of human behaviour, and why machine learning, social psychology, and large language models have converged to make it newly tractable. Covers the Elaboration Likelihood Model, evolutionary biology of communication, and the three forces reshaping persuasion at scale."
+---
+
+In the summer of 2014, a team of researchers at Facebook adjusted the algorithm
+that decided which posts 689,003 users would see in their News Feed. For one
+week, some users saw more emotionally positive content; others saw more negative
+content. Neither group was told. The researchers then measured whether the
+emotional tone of what users *wrote* shifted in response. It did [@kramer2014experimental].
+The experiment ran, concluded, and was published before anyone outside the
+research team had noticed. When the paper appeared, the reaction was not
+scientific debate. It was fury. The study had, without asking, reached into
+nearly seven hundred thousand people's emotional lives and tugged.
+
+That reaction, the fury as much as the finding, tells us something about where
+persuasion sits in human experience. We tolerate advertising. We expect
+politicians to argue. But the idea that our feelings could be modulated,
+systematically, by a decision made in a server room, at scale, without our
+knowledge, struck something deep. The question this book is organised around is
+why that works at all, and what it means that machines can now do it faster,
+cheaper, and more precisely than any human practitioner ever could.
+
+## The Telescope Problem
+
+Every discipline that studies persuasion is pointing a telescope at the same
+object. The disagreements between them are mostly about magnification.
+
+Evolutionary biology operates at the longest focal length: millions of years.
+The capacity for language itself is, on this view, a persuasion technology:
+the most powerful mechanism evolution has produced for achieving the alignment
+of behaviour toward shared objectives. @dunbar1992neocortex showed that neocortex
+size across primate genera tracks mean social group size, suggesting the brain
+expanded under the cognitive pressure of managing relationships, not solving
+environmental puzzles. Managing relationships *is* persuasion: the ongoing attempt
+to bring others to act in ways consistent with shared objectives, whether that
+means a food-sharing arrangement, a defensive coalition, or a mating strategy. The argument among social animals never stopped; it
+just got more elaborate. Krebs and Dawkins [-@krebs1984animal] framed the
+evolutionary logic directly: communication is an equilibrium. Signals persist only when conditions stabilise them, and the
+history of animal communication is an arms race between manipulation and the
+resistance that manipulation breeds. The **handicap principle**, @zahavi1975mate's
+insight that only signals costly enough to be unfakeable are trusted by receivers
+over evolutionary time, explains why the peacock's tail is as long as it is,
+why human rhetoric gravitates toward the elaborate and the expensive, and why
+"cheap talk" is an insult in any language [@zahavi1997handicap]. Beyond kin,
+cooperation depends on reputation: honest signals to third parties are the
+evolutionary root of gossip, public standing, and, eventually, institutional
+trust. @nowak2006five synthesised five routes to cooperation, each requiring
+a signalling system that makes intent legible and defection costly.
+
+History and anthropology zoom in one level: centuries. The persuasive
+achievements that shaped civilisations, the Axial Age religions that mobilised
+populations around shared narratives, the rhetorical systems of Athens and Rome,
+the Reformation pamphlet campaigns made possible by the printing press, the
+colonial enterprises that required millions of people to be convinced that
+hierarchy was natural, operated at the scale of generations. Mythology is coordination technology. @lasswell1948structure, writing in
+the shadow of two world wars, understood propaganda as the normal instrument of political power, continuous with rhetoric, continuous
+with preaching. Each of these historical episodes was, at its core, an exercise
+in changing what large numbers of people believed and therefore did.
+
+Linguistics sits at a shorter timescale: the decades or centuries over which
+speech communities encode persuasive asymmetries into the structure of language
+itself. Powerful versus powerless speech styles (hedging, intensifiers,
+disclaimers, tag questions) carry social weight. They predict how
+speakers are judged and whether arguments are accepted. Rhetorical questions,
+narrative over argument, framing through word choice: the lexicon and syntax of a
+language are pre-loaded with
+persuasive architecture, accumulated across generations of speakers. @fedorenko2024language
+reviewed the neural evidence for a sharper claim: the language network and the
+reasoning network in the human brain are substantially dissociated. Language
+comprehension does not reliably engage the executive systems that critically
+evaluate arguments. Messages can be processed, and influence exerted, along a
+channel that bypasses the circuitry that might push back.
+
+Social psychology zooms further in: hours to days. Since @festinger1957theory's
+work on cognitive dissonance, and accelerating through the decades of attitude
+change research that followed, psychologists have run experiments in which a
+message is delivered and a belief is measured before and after. The **Elaboration
+Likelihood Model** [@petty1986elaboration] remains the dominant framework: two
+routes to attitude change, a *central* route driven by argument quality (effortful,
+durable) and a *peripheral* route driven by cues: source attractiveness, social
+proof, message fluency (fast, fragile). Which route a receiver takes depends on
+motivation and capacity to process. Most persuasion, most of the time, runs
+peripherally. The implications of this for AI-generated content sit uneasily with what follows.
+
+Neuroscience reaches the shortest human timescale: milliseconds to seconds before
+and during a message encounter. Functional imaging has identified the systems
+reliably involved. The ventromedial prefrontal cortex (vmPFC) is central to belief
+updating and social decision-making; damage there leaves factual knowledge intact
+but wrecks the capacity to integrate emotional valuation with propositional belief.
+The amygdala responds to emotionally charged stimuli and its activation during
+message exposure correlates with later recall and attitude change, the
+neurological substrate of why fear and moral outrage move people more reliably
+than statistics. The default mode network, active during internally directed
+thought, is recruited when people process narrative, simulate social scenarios, and
+reason about others' beliefs; narrative persuasion runs through different systems
+than direct argument, which may be why it tends to produce more durable change
+[@falk2010neural].
+
+Computer science and AI operate across more of these timescales than is immediately
+obvious. At the shortest end: inference time. A large language model generating a
+personalised political message for a specific voter, calibrated to inferred values,
+fears, and information diet, runs in seconds. The loop that evolution tuned over
+millions of years closes in milliseconds, at population scale, at near-zero
+marginal cost.
+
+The computational study of behaviour, however, reaches much further. At the daily
+scale, machine learning has been trained since the early 2010s on the click
+decisions of hundreds of millions of people [@mcmahan2013ad]. Whether a user,
+shown a given advertisement at a given moment, engages — that decision, multiplied
+across billions of daily auctions, forms a continuously updating empirical map of
+what moves whom under which conditions. More recently, large models trained on
+engagement signals — likes, shares, the actual behavioural record of populations —
+have begun to capture the implicit preferences of whole demographics at a scale no
+survey could approach [@khandelwal2023large].
+
+At longer timescales the picture extends further still. Song et al. analysed the
+location traces of mobile phone users and found that individual human movement is
+predictable to roughly 93 percent accuracy: daily life is deeply structured by
+routine, and those routines are legible from behavioural data [@song2010limits].
+Opinion dynamics, echo chambers, and the spread of beliefs through social networks
+follow similar regularities — small individual tendencies, iterated across millions
+of interactions, crystallise into collective patterns that outlast any single
+episode. The computational tools to model these dynamics at full social scale now
+exist. Whether that capacity is applied to understanding persuasion or to enacting
+it at industrial precision is, at the time of writing, genuinely open.
+
+## Behaviour Is Unsolved
+
+All of that computational machinery — models trained on billions of clicks, location
+traces mapping the regularity of daily life, language models composing targeted
+messages in real time — rests on a foundation that has so far resisted rigorous
+scientific treatment. The tools are ahead of the theory. Consider Kelin, an eager
+advertiser who releases a campaign on Facebook one Friday evening, paying \$1,000
+to run an ad across California. With each launch, she
+silently sends a prayer that the ad resonates with her customers, draws clicks,
+leads to purchases, ensures her campaign's success. Come Monday morning, she has
+received 28 comments, 867 likes, 9,045 views, 349 clicks, and 28 purchases.
+Satisfied but seeking improvement, she tweaks a few words and relaunches. Her
+metrics jump by 10.8%. She is pleased with the outcome but cannot explain it.
+
+From one perspective, Kelin and the countless practitioners like her are
+replicating, daily, what the botanist Gregor Mendel did in the 1860s. The
+difference is that Mendel's subjects were peas and Kelin's are people. Mendel
+wanted to know why some pea plants are tall and some small, some green and some
+yellow. Kelin wants to know what makes people click, comment, share, and buy:
+why certain words perform in California but not in Texas, and how behaviour can be
+reliably changed. Mendel's laboratory was his Moravian monastery farm. Kelin's
+laboratory is the digital landscape of Facebook, YouTube, and Google.
+
+Before Mendel, the understanding of heredity was philosophical rather than
+scientific. Today, 150 years later, we can calculate to high precision the
+probability of a rare cancer arising in the offspring of two given parents. The
+science of heredity was transformed from speculation into rigorous, predictive
+knowledge by the discipline Mendel founded.
+
+Kelin's problem has not yet had its Mendel. Rocket science is considered the
+hardest of sciences, and it is, in important ways, *solved*: interplanetary
+launches over hundreds of millions of kilometres can be planned to an accuracy of
+a few metres. Yet human conduct remains inscrutable.
+
+> "We're actually much better at planning the flight path of an interplanetary
+> rocket than we are at managing the economy, merging two corporations, or even
+> predicting how many copies of a book will sell. So why is it that rocket science
+> seems hard, whereas problems having to do with people seem like they ought to be
+> just a matter of common sense?"
+>
+> — Duncan J. Watts
+
+> "If the brain were so simple we could understand it, we would be so simple we
+> couldn't."
+>
+> — Emerson M. Pugh
+
+Opinion polls conducted the day before an election routinely give opposite results
+to the actual outcome. People can be stubbornly resistant to changing their minds
+even when their health or economic wellbeing is at stake [@petty1986elaboration].
+And yet some campaigns move millions. The variance in outcomes, between the
+campaigns that fail and the ones that catch fire, is signal. The problem is that we cannot yet read it reliably.
+
+## Three Converging Forces
+
+The argument of this book is that persuasion is the central unsolved problem of
+the study of human behaviour, and that we are at last in a position to make
+serious scientific progress on it. Three things have converged.
+
+The first is a new generation of machine learning methods capable of processing
+behavioural data at scale (the kind of data that Kelin generates every Friday
+and discards every Monday). Methods that can surface patterns in what persuades
+across millions of interactions, not just the dozens of participants in a
+laboratory study.
+
+The second is a rich body of experimental evidence accumulated over decades in
+social psychology and political science on what actually changes minds. The
+effect sizes are often small; the conditions matter enormously; the literature is
+contested. But it exists, and it is far richer than the practitioners who run
+Kelin's campaigns typically know.
+
+The third is large language models that can both simulate and enact persuasion at
+industrial scale. This is the development that changes the stakes. We are in
+another such period now. The printing press, the broadcast era, the internet each
+created a step-change in the reach and speed of persuasive communication. LLMs
+represent a different kind of change: *personalised generation* at zero marginal cost. The sender of a message may be a
+machine. The message may be tailored to a single individual. The channel may be
+every screen simultaneously.
+
+## The Fields at a Glance
+
+| Field | Time scale | Central construct |
+|-------|-----------|------------------|
+| Evolutionary biology | Millions of years | Signalling, honest signals, kin selection |
+| History / anthropology | Centuries | Narrative, propaganda, institutional rhetoric |
+| Linguistics | Decades to centuries | Speech style, framing, narrative over argument |
+| Social psychology | Hours to days | Attitude change, ELM, dissonance |
+| Neuroscience | Milliseconds to seconds | vmPFC, amygdala, language-reasoning dissociation |
+| CS and AI | Milliseconds to months | Click modelling, mobility prediction, argumentation mining, LLMs |
+
+: Disciplinary perspectives on persuasion, organised by characteristic time scale {#tbl-fields}
+
+What makes the study of persuasion interesting and difficult at the same time is
+that every field has tried to answer the same fundamental question from a
+different vantage point, accumulating incompatible vocabularies, incommensurable
+measures, and siloed literatures. Machine learning rarely gets a seat at the table where rhetoric is discussed. Top academic programmes in rhetoric do
+not discuss the advances that computers have enabled. This review attempts a
+unification. We shall no doubt be accused of grossly oversimplifying along the
+way. We hope our readers will help us correct the errors we make in commission,
+since today there is mostly ignorance, which is error by omission.
+
+::: {.callout-note}
+## Case Study: "Don't Mess With Texas"
+
+In 1985, "Don't Mess With Texas" bumper stickers began appearing on cars in
+Texas, beginning the launch of what turned out to be the most successful
+anti-littering campaign ever conducted in the United States. The campaign,
+commissioned by the Texas Department of Transportation, targeted young male
+truck drivers. The advertising team recruited well-known masculine icons,
+members of the Dallas Cowboys, Willie Nelson, Matthew McConaughey, who looked
+sternly into the camera as they crushed beer cans and proclaimed the slogan.
+
+The campaign capitalised on Texan pride, reduced litter by 72% in six years,
+and is now a textbook example of **message-audience fit** in persuasion. Nothing
+in its design required knowing why it worked. Kelin would recognise the situation.
+:::
+
+## What Follows
+
+The chapters ahead are organised around the convergence described above. The
+biological and evolutionary record comes first, because it establishes what
+persuasion must accomplish at its most fundamental level before culture and
+technology elaborate on that foundation. Then the social science evidence: what
+attitude change research has established, where it remains contested, and what the
+translation from laboratory to field typically loses. Then the computational turn:
+what machine learning methods have made possible, what LLMs have changed, and what
+the field must now answer that it could not have asked before. Persuasion at machine scale is already here. The question is whether
+we understand it well enough to think clearly about what we want to do with it.

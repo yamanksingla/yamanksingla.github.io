@@ -1,0 +1,309 @@
+---
+title: "The Last Thirty Years: Data, Models, and Behavioural Science at Scale"
+description: "How digital behavioural data, machine learning, and large language models transformed the study and practice of persuasion. Covers descriptive, simulative, and generative computational persuasion; micro-targeting; opinion dynamics; and AI-generated content at population scale."
+---
+
+## Three Modes of Automated Persuasion {#sec-three-modes}
+
+The computational literature on persuasion can be organised into three capability
+classes, ordered by the direction of information flow relative to the persuasion
+act:
+
+| Capability | Direction | Goal |
+|-----------|-----------|------|
+| **Descriptive** | Observation → Explanation | Explain and measure persuasion in existing content |
+| **Simulative** | Content → Predicted Response | Predict human persuasive response before it occurs |
+| **Generative** | Target → Optimised Content | Create maximally persuasive content for a given audience |
+
+**Descriptive** systems explain the mechanics of persuasion in observed content:
+why some arguments land and others do not, what emotional valence predicts
+engagement, what visual features drive ad memorability. The core output is
+understanding, a post-hoc account of what made existing content persuasive.
+Argumentation mining, sentiment analysis, and multimodal content analysis belong
+here.
+
+**Simulative** systems predict how a given person or population will respond to a
+message *before* it is deployed. This closes the loop from observation to
+prediction. Single-person micro-targeting, opinion dynamics modelling, propaganda
+propagation forecasting, and audience selection all require simulative capacity.
+Large agent-based simulators now make it possible to test a message's trajectory
+through synthetic populations before any human sees it.
+
+**Generative** systems produce persuasive content optimised for a particular
+configuration of audience, time, channel, sender, and topic. Large language
+models have dramatically lowered the cost of generating fluent, targeted text at
+scale. This is the most powerful, and ethically fraught, capability class.
+If an AI system can produce a message more persuasive than any human writer could,
+tailored to a single individual, delivered via the channel and at the moment of
+greatest receptivity, the governance questions become pressing in ways they have
+not been before.
+
+These three modes are concurrent capabilities. The most
+consequential deployed systems combine all three: observe at scale, simulate
+response, generate optimised output. The history of how that integration became
+possible is the subject of this chapter.
+
+::: {.callout-note}
+## Chapter Overview
+This chapter traces the most consequential structural change in the study of
+persuasion since Aristotle: the emergence of digital data and machine learning
+as instruments for observing, analysing, and ultimately generating persuasive
+communication at population scale.
+:::
+
+## A Before and After
+
+For most of human history, the study of persuasion was limited by what could be
+directly observed: a speech in the agora, a pamphlet, an advertisement, a
+laboratory experiment with dozens of undergraduate participants. The mechanisms
+of attitude change were inferred from small samples, self-reports, and controlled
+but artificial stimuli. The *reach* of any persuasive act was difficult to
+measure, and the diversity of human responses to the same message was largely
+invisible.
+
+The last twenty years have fundamentally altered this situation. Three
+developments, each building on the last, have together created a new scientific
+infrastructure for understanding and producing persuasion at scale:
+
+1. **The internet as a data-collection instrument** — the digitisation of everyday
+   behaviour into machine-readable traces.
+2. **Machine learning at scale** — the development of methods capable of finding
+   structure in datasets orders of magnitude larger than anything previously
+   studied.
+3. **Large Language Models** — systems trained on the accumulated textual output
+   of humanity, capable of generating fluent, contextually appropriate, and
+   persuasive communication.
+
+## The Internet and the Instrumentation of Behaviour {#sec-internet}
+
+The internet created a new kind of scientific instrument that also happened to be a communication channel. Every search query, every click, every
+purchase, every moment of attention leaves a digital trace: a record of human
+behaviour generated as a byproduct of ordinary life rather than constructed for
+scientific purposes [@lazer2020meaningful]. By the early 2010s, the aggregate
+volume of these traces (what came to be called *big data*) exceeded anything
+the social sciences had previously encountered.
+
+@lazer2020meaningful describe this as enabling observation of "populations and
+phenomena that were previously difficult or impossible to study." Location data
+from mobile phones can reveal urban mobility patterns. Search engine queries
+serve as real-time proxies for public health trends, most famously (and
+cautionarily) in the case of Google Flu Trends [@lazer2014parable]: during the
+2011–2012 flu season, GFT overshot actual influenza-like illness levels by more
+than 50%, and in February 2013 it predicted more than *double* the CDC-measured
+proportion of doctor visits for flu, remaining miscalibrated in 100 of 108
+consecutive weeks. Social media posts have been used to infer psychological
+traits, predict economic indicators, and track the spread of misinformation. In
+each case, the underlying scientific move is the same: substitute scarce,
+expensive, purpose-built data collection (surveys, experiments, ethnography) with
+abundant, cheap, incidentally generated digital traces.
+
+The implications for persuasion research are profound. Rather than measuring
+attitude change in a laboratory sample of 80 participants, researchers can
+observe the response of millions of people to the same message in the wild.
+Rather than constructing artificial stimuli, researchers can study the persuasive
+effects of actual political advertisements, actual product descriptions, actual
+public health communications, on their actual audiences.
+
+### Digital Traces and the Limits of Measurement
+
+@lazer2020meaningful are also careful to note the dangers. Digital data sources
+were not designed for scientific measurement and bring their own distortions:
+platform algorithms determine which content is seen, changing affordances alter
+what traces are generated, and the populations that produce digital data are not
+representative of humanity [@olteanu2019social]. Most fundamentally, human
+behaviour is not stable under observation: the act of measuring changes what
+is measured, as platforms that optimise for engagement discover when they shape
+the very behaviour they are trying to predict.
+
+The engagement-optimisation literature makes this tension vivid. @kapoor2024measuring
+show that maximising user engagement, the primary metric of most digital
+platforms, does not necessarily maximise user welfare. Platforms can increase
+the time users spend on a service while simultaneously making them less happy,
+because the behaviours that are most measurable (clicks, time-on-site, shares)
+are the ones most subject to impulsive rather than reflective choice. The
+persuasion effects of platform design are therefore built into the measurement infrastructure itself.
+
+## The Wikipedia Moment: Big Data Meets Social Science {#sec-wikipedia}
+
+The availability of large digital corpora created an early opportunity to test
+whether the social sciences could make use of them. Wikipedia, with its
+comprehensive edit histories and contributor metadata, became a proving ground.
+@lemmerich2019world showed that large-scale analysis of Wikipedia contributions
+could reveal geographic imbalances in knowledge production, patterns of conflict
+and consensus among editors, and the dynamics of public goods contributions at
+a scale unattainable by any previous method.
+
+Yet @lemmerich2019world also found that this research remained largely
+**disciplinarily siloed**: studies of Wikipedia tended to answer questions
+motivated by the structure of the available data rather than by established
+theoretical questions, and findings were rarely integrated across fields. Big data turned out to require better theories to exploit well, not fewer.
+
+## The ImageNet Inflection: Machine Learning at Scale {#sec-imagenet}
+
+The second development was the maturation of machine learning into a tool capable
+of finding structure in datasets of unprecedented size. The pivotal moment was
+the 2012 ImageNet Large Scale Visual Recognition Challenge, in which Krizhevsky,
+Sutskever, and Hinton demonstrated that a deep convolutional neural network
+(AlexNet) could reduce image classification error from 26% to 15%, a margin so
+large that it immediately shifted the direction of the entire field
+[@krizhevsky2012imagenet; @deng2009imagenet].
+
+ImageNet itself, a manually labelled database of over 14 million images across
+more than 20,000 categories assembled by Fei-Fei Li and colleagues, made this
+possible by providing a training set large enough to prevent overfitting in
+high-capacity models. The lesson generalised immediately: **the combination of
+large, well-labelled datasets and high-capacity models trained with sufficient
+compute produced qualitative improvements** in performance on tasks previously
+considered intractable.
+
+The implications for behavioural research took a decade to become clear. If models trained on millions of images could learn
+to recognise objects, scenes, and faces, could models trained on millions of
+human interactions learn to recognise, and produce, persuasion?
+
+## Large Language Models: Persuasion Industrialised {#sec-llms}
+
+The third development was the emergence of Large Language Models (LLMs): neural
+networks trained on massive corpora of human-generated text to predict the next
+token in a sequence. The training corpora are themselves extraordinary artefacts,
+aggregations of the textual output of human civilisation at a scale never before
+assembled for scientific or engineering purposes.
+
+- **BERT** [@devlin2019bert], introduced by Google in 2018, was pre-trained on
+  the English Wikipedia and the BooksCorpus — roughly 3.3 billion words.
+- **GPT-3** [@brown2020language], introduced by OpenAI in 2020, was trained on
+  Common Crawl, WebText, BooksCorpus, and Wikipedia — roughly 570 GB of filtered
+  text, encompassing hundreds of billions of words of internet content.
+- **T5** [@raffel2020exploring] introduced the encoder-decoder framing that
+  unified text classification, translation, summarisation, and question-answering
+  into a single model architecture trained on the Colossal Clean Crawled Corpus
+  (C4), a 750 GB filtered web corpus.
+- Subsequent models, including LLaMA [@touvron2023llama], Falcon, and BLOOM, extended the
+  scale to trillions of tokens and dozens of languages.
+
+The effect of training on text at this scale is qualitative, not merely
+quantitative. These models acquire **world
+knowledge, cultural context, and an implicit model of how humans
+communicate, argue, and persuade.** A model trained to predict the next word in
+a persuasive political speech has, in some sense, learned something about
+persuasion, through statistical exposure to millions of examples.
+
+LLMs can generate persuasive messages, adapt linguistic style to specific
+audiences, construct arguments, anticipate counter-arguments, and calibrate
+emotional tone [@bai2023llm4persuasion]. Studies have shown that GPT-4-generated
+persuasive essays are rated as more persuasive than human-written essays by
+blind evaluators [@voelkel2024llm], and that AI-generated messages can change
+opinions on contested political topics [@hackenburg2023evaluating].
+
+## Large Content and Behaviour Models {#sec-lcbm}
+
+The most recent development extends the LLM paradigm to **behavioural data**:
+the full range of human digital traces, clicks, views,
+purchases, engagement patterns, and search queries. Models in this class, which we
+term Large Content and Behaviour Models (LCBMs) following @kumar2024large, are
+trained on joint corpora of content and the behavioural responses that content
+elicited from real users at scale.
+
+Where LLMs learn *what people say*, LCBMs learn *what people do in response to
+what they see.* This distinction is significant for persuasion research. A model
+that has been trained on the engagement patterns of millions of users across
+millions of pieces of content has, in some sense, learned a generalised model of
+persuasive effectiveness: what kinds of content, in what contexts, for what
+audiences, produce what behavioural changes.
+
+@kumar2024large demonstrate that LCBMs trained on large-scale content-behaviour
+corpora significantly outperform content-only models on downstream behavioural
+prediction tasks, including engagement prediction, sentiment forecasting, and
+audience response modelling. The intuition is straightforward: knowing that a
+message was watched, shared, or acted upon by millions of people provides
+training signal that text alone cannot supply.
+
+## LLMs as Simulators of Human Behaviour {#sec-llm-simulators}
+
+A striking recent trend has been the use of LLMs not as *generators* of
+persuasion but as *simulators* of human responses to persuasion, in effect
+as synthetic subjects for social science experiments.
+
+@argyle2023out showed that GPT-3 can be "conditioned" on demographic profiles
+(age, education, political affiliation, geographic region) to produce responses
+that mirror the survey responses of those groups with remarkable fidelity, a
+technique they term "algorithmic fidelity." Working with three waves of the
+American National Election Studies (2012, 2016, and 2020) and thousands of
+socio-demographic backstories, they created "silicon subjects" that completed
+the same survey tasks as their human counterparts. The simulated subjects
+reproduced complex patterns of relationships between political attitudes,
+demographic identities, and contextual cues that previously required large
+probability samples to detect. The implication is that LLMs internalise
+statistical representations of group-level opinion distributions that can be
+queried at near-zero marginal cost.
+
+@aher2023using extended this finding, showing that LLMs can replicate the
+results of classic social science experiments, including Milgram's obedience
+studies and Kahneman and Tversky's framing effects, without any task-specific
+training. The models produce responses matching the *direction and magnitude* of the original experimental effects.
+
+More directly relevant to persuasion, @broockman2024can found that GPT-4 could
+predict the results of randomised controlled experiments on political persuasion
+with striking quantitative accuracy. Across 476 experimental effect sizes drawn
+from 70 U.S. survey experiments, GPT-4's predicted treatment effects correlated
+with actual outcomes at r = 0.85 (adjusted r = 0.91). For unpublished studies
+that could not have appeared in GPT-4's training data, the correlation was even
+higher at r = 0.90 (adjusted r = 0.94), suggesting that the model has
+internalised something close to a general theory of what persuades, not merely
+memorised prior experimental results.
+
+@park2023generative demonstrated that populations of LLM agents, given minimal
+backstory descriptions, can simulate emergent social dynamics, including opinion
+polarisation, information cascading, and social influence, that closely mirror
+patterns observed in real human populations.
+
+@pellert2023ai showed that LLMs can capture human personality traits as measured
+by standardised psychometric instruments (Big Five, MBTI), reproducing known
+correlations between personality and persuasibility with precision. In their
+study, simulated subjects high in Openness showed significantly stronger
+preference for personality-matched advertisements (β = 0.36, p < 0.001), as did
+those high in Extraversion (β = 0.40, p < 0.001) and Conscientiousness
+(β = 0.29, p = 0.020), effect sizes consistent with decades of empirical
+literature. Crucially, the LLM-generated synthetic subjects reproduced these
+correlations without any task-specific training, implying the model had absorbed
+the personality–persuasibility regularity from its pre-training corpus alone.
+
+::: {.callout-caution}
+## The Limits of LLM Simulation
+
+These findings should be interpreted carefully. LLMs are trained predominantly
+on text produced by Western, English-speaking, educated, and digitally connected
+populations, what Henrich and colleagues term the WEIRD bias (Western, Educated, Industrialised, Rich, Democratic). <!-- CITATION NEEDED: Henrich, Heine & Norenzayan 2010 "The weirdest people in the world?" — please confirm exact journal/volume/pages --> Simulation accuracy
+degrades for populations underrepresented in training data: people over 65,
+the highly religious, non-English speakers, and communities without significant
+digital footprints [@lazer2020meaningful]. The claim that LLMs are "human
+simulators" is therefore a claim that they are simulators of *particular* humans
+, a limitation with significant implications for the use of LLM simulation in
+persuasion research.
+:::
+
+## What This Means for the Study of Persuasion {#sec-implications}
+
+The developments traced in this chapter, digital instrumentation, large-scale
+machine learning, and LLMs, have changed the object of study itself.
+
+Persuasion now operates at the intersection of algorithmic content
+selection, platform incentive structures, user behavioural data, and
+industrially-generated content. The mechanisms by which a message reaches a
+receiver, and the mechanisms by which the receiver's response feeds back to
+determine what message they see next, are now computational and largely
+invisible to both sender and receiver.
+
+Understanding persuasion in this environment requires the integration of the
+classical persuasion literature (elaboration likelihood, attitude change,
+source credibility) with the emerging literature on algorithmic mediation,
+behavioural data at scale, and LLM capabilities. That integration is the
+animating ambition of this review.
+
+| Era | Primary data source | Primary method | Scale of observation |
+|-----|-------------------|----------------|---------------------|
+| Pre-digital (–2000) | Surveys, experiments | Statistical inference | Hundreds to thousands |
+| Early digital (2000–2012) | Web traces, social media | Descriptive analytics, NLP | Millions |
+| Big data / deep learning (2012–2020) | Platform logs, images, video | Deep neural networks | Billions |
+| LLM era (2020–) | Multimodal corpora + behavioural signals | Foundation models, LCBMs | Trillions of tokens |
+
+: Evolution of the empirical infrastructure for persuasion research. {#tbl-eras}

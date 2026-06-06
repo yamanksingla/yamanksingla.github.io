@@ -1,0 +1,236 @@
+---
+title: "Future Trends and Unsolved Questions"
+description: "Open problems and emerging directions in computational persuasion: personalisation at scale, detection of AI-generated influence, receiver resistance, governance of LLM-powered persuasion, and the scientific gap between laboratory attitude change and real-world behaviour."
+---
+
+::: {.callout-note}
+## Chapter Overview
+This chapter identifies the open frontiers of persuasion science as AI enters
+the picture at scale. Six structural problems, micro-targeting, multimodality,
+longitudinal effects, cross-cultural validity, detection, and regulation, are
+examined as interconnected forces reshaping what
+persuasion is, who can deploy it, and what it does to the people it reaches.
+:::
+
+The history of persuasion research follows a recurring pattern. A phenomenon is
+identified, studied under controlled conditions, and slowly understood. Then a
+technology disrupts the conditions the research assumed. The broadcast audience
+fragments into a social network. The social network is replaced by an
+algorithmically curated feed. The feed begins to include content generated in
+real time by a model that has read more text than any human could process in
+a lifetime.
+
+Each disruption changes the *structure* of persuasive content in the world: who
+can send it, at what cost, tailored to whom, through which channels, with what
+feedback loops. Large Language Models are
+the latest disruption, and they are larger than most. The cost of personalisation,
+previously a hard constraint on persuasion at scale, has collapsed. The tradeoff
+between tailoring a message to an individual and reaching millions of people no
+longer holds. What the field has learned about persuasion was learned under
+conditions that no longer obtain.
+
+## Micro-Targeting at Scale {#sec-microtargeting}
+
+Targeted persuasion has existed as long as the concept of audience segmentation.
+What is new is three things happening simultaneously: generation costs approaching
+zero, audience models operating at the individual level, and deployment
+infrastructure that routes personalised messages to billions of people in real
+time.
+
+Previous personalised communication systems had to choose between depth and
+reach. A human speechwriter could personalise deeply for one audience. Direct
+mail could segment into perhaps hundreds of demographic buckets. Neither could
+tailor a message to the specific belief structure, psychological profile, and
+recent context of each individual recipient and then generate unique content
+for each. LLMs can.
+
+Whether this matters empirically is still largely unstudied. @broockman2024can
+found that GPT-4 predicts persuasion experiment outcomes better than naive
+baselines, evidence that LLMs have already extracted from text something of
+the structure of who is persuaded by what. Whether that translates into
+improved effectiveness in real deployment is a separate question. @pellert2023ai
+showed that LLMs exhibit measurable psychological profiles on standard personality
+inventories; if those profiles predict language behaviour, prompt-conditioning
+an LLM to a recipient's psychological profile might produce better-calibrated
+messages. The experimental evidence is thin. The commercial incentive to find
+out is substantial.
+
+The rights questions are empirical questions as much as ethical ones.
+If a platform deploys a model that selects message variants based on individual
+psychological profiles, the intervention is invisible to the recipient.
+Traditional informed consent and disclosure frameworks, designed for messages
+with a fixed sender and a fixed text, do not map onto a system that generates
+unique content for each person. @kapoor2024measuring examine the analogous
+problem in recommendation systems: optimising for engagement may diverge
+systematically from optimising for user welfare, and the divergence is not
+visible to users who cannot observe the counterfactual.
+
+## Multi-Modal Persuasion {#sec-multimodal}
+
+The persuasion literature has been primarily a text literature, not because
+images and audio are unimportant but because the tools to analyse them at
+scale did not exist. They are now beginning to exist.
+
+@zhang2018equal showed that the relationship between image and text in
+advertising is not additive: redundant image-text pairs are less persuasive
+than complementary ones. This basic finding has not been replicated or extended
+at scale. The models and datasets required to do so have only recently become
+available, and they have not yet been combined with behavioural outcome measures.
+
+Video is the harder frontier. A video advertisement is a temporal object with
+a narrative arc, a pace, and a pattern of emotional modulation across time.
+Models that represent video as a bag of sampled frames lose this temporal
+structure entirely. Models capable of processing the temporal dimension have
+not been deployed in persuasion contexts with behavioural outcome labels.
+
+The deeper challenge is that multimodal persuasion research requires datasets
+linking multimodal content to what people actually did afterwards, and those
+datasets do not exist at scale. Existing multimodal corpora were built for
+recognition tasks, not persuasion tasks. Building the missing resource requires
+platform cooperation that platform operators have limited commercial incentive
+to provide.
+
+## Longitudinal Effects {#sec-longitudinal}
+
+Most persuasion experiments measure attitude change immediately after message
+exposure. The theoretical frameworks reviewed in Chapter 3 all have predictions
+about how effects persist or decay over time. The empirical literature on those
+predictions is thin, because studying them requires following the same people
+across time under controlled conditions, which is expensive, attrition-prone,
+and rarely funded.
+
+The longitudinal question is particularly pressing for AI-generated content.
+Human persuasion saturates: people have finite exposure to any particular
+communicator, and repetition eventually breeds reactance. AI-generated content
+does not saturate in the same way. A model can generate indefinitely many
+variants of a persuasive message, each novel, each personalised, each drawing
+on whatever is currently known about the recipient. The theoretical frameworks
+for how attitudes form under continuous, individually tailored exposure do not
+yet exist, let alone empirical tests of them.
+
+Platform behavioural data could in principle close this gap, since it links
+content consumption to downstream behaviour at scale and over time. But
+engagement is a noisy proxy for persuasion: high engagement can reflect
+outrage or entertainment rather than genuine attitude change. And platform
+data is proprietary. The gap between the phenomena the field cares about and
+the phenomena it can observe is structural, not accidental.
+
+## Cross-Cultural Validity {#sec-weird}
+
+The persuasion literature is predominantly WEIRD: Western, Educated,
+Industrialised, Rich, Democratic. The experiments generating the major findings
+were run on student samples at American and European universities. The platforms
+extending this research to larger samples skew toward the same populations.
+The theoretical frameworks built from this evidence have unclear generalisability
+to the roughly six billion people who do not fit this profile.
+
+LLMs inherit and amplify this problem. Pre-training corpora are predominantly
+English. Even multilingual models reflect the cultural norms embedded in the
+high-resource languages that dominate those corpora. @argyle2023out demonstrate
+that LLMs can be conditioned to produce outputs consistent with specific
+demographic profiles, recovering patterns from American survey data. But this
+conditioning operates on cultural surface features available in text. It does
+not recover the cognitive, affective, and relational dimensions of cross-cultural
+difference that are not explicitly stated in training data.
+
+A persuasive message that works by invoking individual achievement and personal
+agency will land differently in cultural contexts where collective solidarity
+is the operative norm. Cross-cultural communication research has established this. The finding has not been operationalised in any large-scale benchmark. There
+are no standardised datasets pairing equivalent persuasive messages across a
+systematic sample of cultural contexts with matched behavioural outcomes. That
+benchmark is a multi-year, multi-institution project. It does not currently exist.
+
+## Detection and Provenance {#sec-detection}
+
+The assumption underlying most persuasion research is that the origin of a
+message is known to the researcher even if not to the recipient. As AI-generated
+content becomes a larger share of the information environment, that assumption
+begins to fail for both researchers and recipients.
+
+Detection of AI-generated text has proven harder than early results suggested.
+Initial classifiers showed high accuracy on held-out test sets, then degraded
+rapidly as model outputs evolved. No reliable, model-agnostic detector of
+AI-generated persuasive text currently exists. Detection rates for
+current-generation LLM output are well below what would be needed to provide
+meaningful provenance assurance at the scale of social media.
+
+This matters for persuasion research beyond the obvious ethical concern. A
+researcher studying attitude change in an information environment containing an
+unknown proportion of AI-generated content is in the position of an
+epidemiologist studying disease transmission in a population with unknown
+vaccination rates. The confounding is not manageable by standard methods.
+
+Cryptographic watermarking, embedding detectable signals in generated text
+at inference time, is technically more promising than post-hoc classifiers,
+but no approach has been adopted as an industry standard, and all can be
+circumvented by paraphrasing. Content provenance standards being developed
+by industry consortia address the distribution layer rather than the generation
+layer, which is more robust to evasion but requires platform adoption that
+commercial incentives do not guarantee.
+
+## Regulation {#sec-regulation}
+
+The regulatory landscape for AI-mediated persuasion is in rapid and inconsistent
+motion. The EU AI Act classifies some AI systems used for persuasion as high-risk
+and imposes transparency requirements, but its category definitions do not map
+cleanly onto the technical reality of how persuasive content is generated and
+distributed. A model generating persuasive political advertisements is not
+categorically different, in technical terms, from a model generating marketing
+copy. The Act's risk-based categorisation has to draw distinctions the technology
+itself does not make.
+
+The US picture is more fragmented. The FTC has issued guidance on AI-generated
+endorsements and synthetic media in advertising; no comprehensive federal AI
+persuasion regulation has passed. State-level legislation has addressed narrow
+cases, synthetic media in electoral communications and voice cloning for political
+advertising, without addressing the full space of AI-mediated persuasion.
+
+The deeper challenge is that the harms regulation is designed to address are
+not well-defined. Existing frameworks borrow from defamation law, advertising
+standards, and electoral law, each designed for a different technological
+context. They prohibit specific content categories without addressing the more
+diffuse harms from persuasion that is technically accurate, disclosed, and
+authentic but systematically nudges large populations toward outcomes that
+benefit the sender at the expense of the receiver.
+
+Regulation without detection is unenforceable. Detection without agreed-upon
+standards is a public good that private actors have no individual incentive to
+produce. The two frontiers form a system, and progress on one is a precondition for progress on the other.
+
+## Where This Leaves the Field {#sec-closing}
+
+The five frontiers above form a system. Micro-targeting research
+requires longitudinal data to evaluate its effects. Cross-cultural research
+requires multimodal content to match the media environments that exist outside
+WEIRD contexts. Detection is a precondition for valid measurement in both. And
+regulation without detection is theatre.
+
+The pattern is familiar from other fields where the phenomena of interest
+outran the measurement technology available to study them. Epidemiology made
+limited progress on chronic disease causation until longitudinal cohort studies
+became practical. Macroeconomics had limited predictive validity until national
+accounting systems were developed. Persuasion science has had, for most of its
+history, measurements calibrated to a world of mass broadcast communication and
+convenience-sample laboratory experiments. The world has changed faster than
+the measurements.
+
+Theory is sufficient; the bottleneck is infrastructure. The frameworks described
+in Chapter 3, elaboration likelihood, dual-process models, and inoculation, are
+sophisticated enough to generate predictions about every frontier discussed here.
+What changes it is infrastructure: datasets that link
+content to real behaviour, platforms that allow controlled exposure experiments
+at scale, detection tools robust enough to tell researchers what kind of content
+their subjects actually consumed. Those are institutional and engineering
+problems, not intellectual ones. They will be solved when the incentives align
+to solve them, or not.
+
+This review will be updated as they do.
+
+::: {.callout-note}
+## This Review is Living
+
+Entries are added and revised as the field evolves. The source and compiled PDF
+are always available on
+[GitHub](https://github.com/yamanksingla/yamanksingla.github.io).
+The PDF updates automatically on every commit via GitHub Actions.
+:::
