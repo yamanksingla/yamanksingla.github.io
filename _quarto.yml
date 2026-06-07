@@ -3,6 +3,8 @@ project:
   output-dir: _book
   resources:
     - google2470e9a9f8650696.html
+  post-render:
+    - add-thesis-to-sitemap.py
 
 book:
   title: "Persuasion via Man and Machine"
@@ -38,9 +40,6 @@ book:
 
   navbar:
     right:
-      - icon: file-pdf
-        href: https://yamanksingla.github.io/Persuasion-via-Man-and-Machine.pdf
-        aria-label: "Download PDF"
       - icon: globe
         href: https://sites.google.com/view/yaman-kumar/
       - icon: linkedin
