@@ -82,11 +82,13 @@ format:
     include-in-header:
       text: |
         \usepackage{microtype}
-        \hypersetup{
-          pdftitle={Persuasion via Man and Machine: A Living Review},
-          pdfauthor={Yaman Kumar Singla},
-          pdfsubject={Computational persuasion, NLP, evolutionary biology of communication, LLMs},
-          pdfkeywords={persuasion, large language models, computational persuasion, attitude change, evolutionary biology, costly signalling, NLP, AI-generated content}
+        \AtBeginDocument{
+          \hypersetup{
+            pdftitle={Persuasion via Man and Machine: A Living Review},
+            pdfauthor={Yaman Kumar Singla},
+            pdfsubject={Computational persuasion, NLP, evolutionary biology of communication, LLMs},
+            pdfkeywords={persuasion, large language models, computational persuasion, attitude change, evolutionary biology, costly signalling, NLP, AI-generated content}
+          }
         }
 
 bibliography: references.bib
