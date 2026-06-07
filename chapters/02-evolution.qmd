@@ -1257,8 +1257,7 @@ persons, while leaving common-noun retrieval intact. Each of these dissociations
 reveals a distinct sub-component of the language system, a modularity within
 language itself that is anatomically grounded.
 
-<!-- CITATION NEEDED: Damasio et al. on colour anomia and object naming — please
-provide the specific paper references -->
+[@damasio1996neural]
 
 The biological specificity of language is shown most directly by a British family
 studied by

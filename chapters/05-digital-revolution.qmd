@@ -272,7 +272,7 @@ the personality–persuasibility regularity from its pre-training corpus alone.
 
 These findings should be interpreted carefully. LLMs are trained predominantly
 on text produced by Western, English-speaking, educated, and digitally connected
-populations, what Henrich and colleagues term the WEIRD bias (Western, Educated, Industrialised, Rich, Democratic). <!-- CITATION NEEDED: Henrich, Heine & Norenzayan 2010 "The weirdest people in the world?" — please confirm exact journal/volume/pages --> Simulation accuracy
+populations, what Henrich and colleagues term the WEIRD bias (Western, Educated, Industrialised, Rich, Democratic). [@henrich2010weirdest] Simulation accuracy
 degrades for populations underrepresented in training data: people over 65,
 the highly religious, non-English speakers, and communities without significant
 digital footprints [@lazer2020meaningful]. The claim that LLMs are "human
