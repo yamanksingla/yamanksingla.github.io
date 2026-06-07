@@ -40,6 +40,9 @@ book:
 
   navbar:
     right:
+      - icon: file-earmark-pdf-fill
+        href: https://yamanksingla.github.io/Persuasion-via-Man-and-Machine.pdf
+        aria-label: "Download PDF"
       - icon: globe
         href: https://sites.google.com/view/yaman-kumar/
       - icon: linkedin
