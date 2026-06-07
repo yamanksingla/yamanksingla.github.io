@@ -34,7 +34,7 @@ species provide the clearest view of what this requires at its most basic level,
 before language and social convention add layers that can obscure the underlying
 structure.
 
-![Cave paintings at Lascaux, France, painted roughly 17,000 years ago. The artists mixed pigments, coordinated effort across sessions, and produced images that survived intact to the present day — the oldest surviving evidence of the kind of shared representation that only language makes possible. *Photo: Peter80 / Sailko. [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).*](../images/lascaux.jpg){width=90% fig-alt="Prehistoric cave paintings on the walls of the Lascaux cave in France, showing horses painted approximately 17,000 years ago."}
+![Cave paintings at Lascaux, France, painted roughly 17,000 years ago. The artists mixed pigments, coordinated effort across sessions, and produced images that survived intact to the present day — the oldest surviving evidence of the kind of shared representation that only language makes possible. *Photo: JoJan. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*](../images/lascaux.jpg){width=90% fig-alt="Prehistoric cave paintings on the walls of the Lascaux cave in France, showing horses painted approximately 17,000 years ago."}
 
 The connection between brain evolution and social life sharpens the argument.
 Dunbar [-@dunbar1992neocortex] measured the ratio of neocortex volume to total
