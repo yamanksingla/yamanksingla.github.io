@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,7 +54,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/references.html" rel="next">
-<link href="../chapters/06-digital-revolution.html" rel="prev">
+<link href="../chapters/06-resources.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -177,14 +197,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Resources for Persuasion Research</span></span></a>
+  <a href="../chapters/05-digital-revolution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Last Twenty Years: Data, Models, and Behavioural Science at Scale</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-digital-revolution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Last Twenty Years: Data, Models, and Behavioural Science at Scale</span></span></a>
+  <a href="../chapters/06-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Resources for Persuasion Research</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,8 +224,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-measurement" id="toc-sec-measurement" class="nav-link active" data-scroll-target="#sec-measurement"><span class="header-section-number">8.1</span> The Measurement Problem</a></li>
+  <li><a href="#sec-microtargeting" id="toc-sec-microtargeting" class="nav-link" data-scroll-target="#sec-microtargeting"><span class="header-section-number">8.2</span> Micro-Targeting at Scale</a></li>
+  <li><a href="#sec-multimodal" id="toc-sec-multimodal" class="nav-link" data-scroll-target="#sec-multimodal"><span class="header-section-number">8.3</span> Multi-Modal Persuasion</a></li>
+  <li><a href="#sec-longitudinal" id="toc-sec-longitudinal" class="nav-link" data-scroll-target="#sec-longitudinal"><span class="header-section-number">8.4</span> Longitudinal Effects</a></li>
+  <li><a href="#sec-weird" id="toc-sec-weird" class="nav-link" data-scroll-target="#sec-weird"><span class="header-section-number">8.5</span> Cross-Cultural Validity and the WEIRD Problem</a></li>
+  <li><a href="#sec-detection" id="toc-sec-detection" class="nav-link" data-scroll-target="#sec-detection"><span class="header-section-number">8.6</span> Detection and Provenance</a></li>
+  <li><a href="#sec-regulation" id="toc-sec-regulation" class="nav-link" data-scroll-target="#sec-regulation"><span class="header-section-number">8.7</span> Regulation</a></li>
+  <li><a href="#sec-simulation" id="toc-sec-simulation" class="nav-link" data-scroll-target="#sec-simulation"><span class="header-section-number">8.8</span> Simulation Environments and the LLM-as-Participant Turn</a></li>
+  <li><a href="#sec-gaps" id="toc-sec-gaps" class="nav-link" data-scroll-target="#sec-gaps"><span class="header-section-number">8.9</span> Resource Gaps</a></li>
+  <li><a href="#sec-closing" id="toc-sec-closing" class="nav-link" data-scroll-target="#sec-closing"><span class="header-section-number">8.10</span> Closing Note</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/edit/main/chapters/07-future.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -229,14 +264,97 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li><p><strong>Micro-targeting at LLM scale</strong> — as generation costs approach zero, personalised persuasion will become the norm. What individual rights are at stake?</p></li>
-<li><p><strong>Multi-modal persuasion</strong> — integrating text, image, audio, and video into unified persuasion models.</p></li>
-<li><p><strong>Longitudinal effects</strong> — most studies measure immediate attitude change; long-run effects of AI-generated persuasion are almost completely unstudied.</p></li>
-<li><p><strong>Cross-cultural persuasion</strong> — what works in one cultural context often fails in another; LLMs trained predominantly on English data may encode WEIRD (Western, Educated, Industrialised, Rich, Democratic) persuasion norms.</p></li>
-<li><p><strong>Detection &amp; provenance</strong> — as generative AI scales, detecting AI-generated persuasive content becomes a critical counterbalancing capability.</p></li>
-<li><p><strong>Regulation</strong> — the EU AI Act and proposed US legislation are beginning to address AI-mediated persuasion; the regulatory landscape is rapidly evolving.</p></li>
-</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Chapter Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter surveys the open frontiers of persuasion science as AI enters the picture at scale. Six structural problems — micro-targeting, multimodality, longitudinal effects, cross-cultural validity, detection, and regulation — are examined through the lens of what the field currently knows, what it can currently measure, and what would need to change for progress to become possible.</p>
+</div>
+</div>
+<p>The preceding chapters have assembled what is known about persuasion. This one asks what is not known, and what the obstacles are to finding out.</p>
+<p>There is a recurring pattern in the history of persuasion research. A phenomenon is identified: framing effects, emotional contagion, the role of source credibility. Experimental paradigms are developed to study it under controlled conditions. Over decades, an empirical literature accumulates. Then a technology disrupts the conditions the paradigm assumed — the broadcast audience fragments into a social network; the social network is replaced by an algorithmically curated feed; the curated feed begins to include content generated in real time by a model that has read more text than any human could process in a lifetime. The experimental paradigm, designed for one world, is now being used to study another.</p>
+<p>Large Language Models are the latest disruption. They do not merely change the <em>volume</em> of persuasive content available; they change its <em>structure</em>. The cost of personalisation, previously a hard constraint on persuasion at scale, has collapsed. The tradeoff between tailoring and scalability that had defined political communication, advertising, and public health messaging for decades no longer holds. What the field has learned about persuasion was learned under conditions that no longer obtain.</p>
+<section id="sec-measurement" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sec-measurement"><span class="header-section-number">8.1</span> The Measurement Problem</h2>
+<p>Before examining individual research frontiers, it is worth diagnosing what makes progress difficult across all of them. The fundamental difficulty is measurement.</p>
+<p>Persuasion researchers work with a small number of outcome measures: self-reported attitude change, stated behavioural intentions, and laboratory behavioural proxies. All three are imperfect. Attitudes are volatile and poorly predict behaviour. Intentions are confounded by social desirability. Laboratory proxies (willingness-to-pay, button-pressing tasks, hypothetical choices) differ from real behaviour in unknown ways. The Google Flu Trends episode is the canonical cautionary tale: a model that predicted flu incidence with startling accuracy from search data collapsed when the underlying query behaviour changed, illustrating the general hazard of proxies in a domain where the phenomena of interest are in constant motion <span class="citation" data-cites="lazer2014parable">[<a href="references.html#ref-lazer2014parable" role="doc-biblioref">10</a>]</span>.</p>
+<p>The available datasets reflect this limitation. The major NLP benchmarks for persuasion, such as those introduced by <span class="citation" data-cites="habernal2016makes">[<a href="references.html#ref-habernal2016makes" role="doc-biblioref">5</a>]</span> and <span class="citation" data-cites="longpre2019persuasion">[<a href="references.html#ref-longpre2019persuasion" role="doc-biblioref">12</a>]</span>, are argument-quality datasets: they capture whether raters find one argument more convincing than another in a controlled reading context. This is a useful signal but it is a long way from measuring whether a particular message moved a particular person’s behaviour in the real world, under distraction, over time, as part of an ongoing relationship between a sender and a receiver.</p>
+<p>The datasets that do come closer — ANES panel waves, platform engagement logs, advertising response data — are either proprietary, retrospective, or ecological (they measure what happened, not why). The gap between the phenomena the field cares about and the phenomena it can observe is a structural feature of persuasion research, not a temporary oversight.</p>
+</section>
+<section id="sec-microtargeting" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-microtargeting"><span class="header-section-number">8.2</span> Micro-Targeting at Scale</h2>
+<p>Targeted persuasion has existed for as long as the concept of audience segmentation. What is new is the combination of three things happening simultaneously: generation costs that are effectively zero, audience models that operate at the individual level, and deployment infrastructure that can route personalised messages to billions of people in real time.</p>
+<p>This is not an incremental change. Previous personalised communication systems had to choose between personalisation depth and reach. A human speechwriter could personalise deeply for one audience. Direct mail could segment broadly into perhaps hundreds of demographic buckets. Neither approach could tailor a message to the specific belief structure, psychological profile, and recent browsing history of each individual recipient and then generate unique content for each. LLMs can.</p>
+<p>The empirical question is whether this matters. <span class="citation" data-cites="broockman2024can">[<a href="references.html#ref-broockman2024can" role="doc-biblioref">4</a>]</span> asked whether GPT-4, given descriptions of experiment participants, could predict the results of social science persuasion experiments better than the average experimental effect. The answer was yes, with accuracy that exceeded naive baseline predictions. This is evidence that LLMs have already extracted from text something of the structure of who is persuaded by what. Whether that extracted knowledge translates into improved persuasive effectiveness in deployment is a separate question, and largely unstudied.</p>
+<p><span class="citation" data-cites="pellert2023ai">[<a href="references.html#ref-pellert2023ai" role="doc-biblioref">14</a>]</span> showed that LLMs exhibit measurable psychological profiles on standard instruments — Big Five personality inventories, cognitive reflection tests, moral foundations scales. If these profiles are real in the sense that they predict language behaviour, then prompt-conditioning an LLM to a particular psychological profile might produce messages better calibrated to a matching audience. The experimental evidence for this is thin; the commercial interest in answering the question is substantial.</p>
+<p>What the field lacks is a systematic benchmark for personalised persuasion effectiveness: a dataset that pairs message variants, recipient profiles, and measured behavioural outcomes in a controlled but externally valid setting. The multimodal persuasion prediction dataset M2P2 <span class="citation" data-cites="bai2021m2p2">[<a href="references.html#ref-bai2021m2p2" role="doc-biblioref">2</a>]</span> is a step in this direction for advertising contexts, but it measures predicted persuasion ratings rather than real behaviour change, and it does not vary recipient characteristics systematically.</p>
+<p>The rights questions raised by micro-targeting at scale are not merely ethical decorations on an empirical problem. They have direct methodological implications. If a platform or advertiser deploys a model that selects message variants on the basis of individual psychological profiles, the intervention is no longer observable to the recipient. Traditional informed consent and disclosure frameworks, designed for messages with a fixed sender and a fixed text, do not map onto a system that generates unique content for each recipient. <span class="citation" data-cites="kapoor2024measuring">[<a href="references.html#ref-kapoor2024measuring" role="doc-biblioref">6</a>]</span> examine the related problem in recommendation systems: optimising for engagement may diverge systematically from optimising for user welfare, and the divergence is not visible to users who cannot observe the counterfactual (what they would have been shown under a different objective function).</p>
+</section>
+<section id="sec-multimodal" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-multimodal"><span class="header-section-number">8.3</span> Multi-Modal Persuasion</h2>
+<p>The persuasion literature has been primarily a text literature, and this is not because images and audio are unimportant. <span class="citation" data-cites="zhang2018equal">[<a href="references.html#ref-zhang2018equal" role="doc-biblioref">19</a>]</span> showed that the relationship between image and text in advertising is not additive: the two modalities interact, and which interaction occurs depends on structural properties of the message and the audience. Images that are redundant with the text reduce overall persuasiveness; images that fill in information absent from the text amplify it. This basic finding has not been replicated or extended at scale, because the datasets and models required to do so at scale did not exist until recently.</p>
+<p>They are now beginning to exist. The eMotions dataset <span class="citation" data-cites="wu2023emotions">[<a href="references.html#ref-wu2023emotions" role="doc-biblioref">17</a>]</span> and EmoSet <span class="citation" data-cites="yang2023emoset">[<a href="references.html#ref-yang2023emoset" role="doc-biblioref">18</a>]</span> provide large-scale annotations of emotional content in images and video. The M2P2 dataset <span class="citation" data-cites="bai2021m2p2">[<a href="references.html#ref-bai2021m2p2" role="doc-biblioref">2</a>]</span> pairs multimodal ad content with persuasion scores. Tools for automatic visual analysis, including scene detection <span class="citation" data-cites="breakthrough-pyscenedetect">[<a href="references.html#ref-breakthrough-pyscenedetect" role="doc-biblioref">3</a>]</span>, salient object segmentation <span class="citation" data-cites="qin2020u2">[<a href="references.html#ref-qin2020u2" role="doc-biblioref">15</a>]</span>, and universal segmentation <span class="citation" data-cites="kirillov2023segment">[<a href="references.html#ref-kirillov2023segment" role="doc-biblioref">7</a>]</span>, now make it possible to decompose the visual stream of a video advertisement into constituent elements and ask which elements carry persuasive load.</p>
+<p>Video is the harder frontier. A video advertisement is a temporal object: it has a narrative arc, a pace, a pattern of emotional modulation across time. Models that represent video as a bag of sampled frames lose this temporal structure entirely. Models that process video as a sequence, such as VideoMAE and InternVideo, can represent temporal patterns but have not been deployed in persuasion contexts with behavioural outcome labels. The VideoChat architecture <span class="citation" data-cites="li2023videochat">[<a href="references.html#ref-li2023videochat" role="doc-biblioref">11</a>]</span> enables natural-language querying of video content, which opens the possibility of structured annotation at scale, but the annotations produced are semantic (what is shown?) rather than persuasive (what did it do to the viewer?).</p>
+<p>The deeper problem is that multimodal persuasion research requires datasets that link multimodal content to outcome measures. Existing large-scale multimodal datasets, Conceptual Captions <span class="citation" data-cites="sharma2018conceptual">[<a href="references.html#ref-sharma2018conceptual" role="doc-biblioref">16</a>]</span>, Kinetics, ActivityNet, are constructed for recognition tasks (what is in this image/video?) rather than persuasion tasks (how did this image/video change what the viewer did?). A dedicated multimodal persuasion benchmark, with behavioural outcomes rather than preference ratings, would be a substantial contribution.</p>
+</section>
+<section id="sec-longitudinal" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="sec-longitudinal"><span class="header-section-number">8.4</span> Longitudinal Effects</h2>
+<p>Most persuasion experiments measure attitude change immediately after message exposure, sometimes with a short delay. The theoretical frameworks reviewed in Chapter 3 — the Elaboration Likelihood Model, the Heuristic-Systematic Model, inoculation theory — all have predictions about how effects persist or decay over time. The empirical literature on those predictions is thin.</p>
+<p>The problem is not that researchers do not care about longitudinal effects. It is that studying them requires following the same people across time, which is expensive and attrition-prone. Panel datasets like the American National Election Studies waves provide longitudinal attitude tracking, but they are not designed for message-level analysis: you cannot link a specific ANES respondent to the specific content they consumed between survey waves. Platform engagement logs can provide that link but are proprietary.</p>
+<p><span class="citation" data-cites="lazer2020meaningful">[<a href="references.html#ref-lazer2020meaningful" role="doc-biblioref">9</a>]</span> argue that digital behavioural data represents a fundamentally new resource for understanding social processes, but only if the epistemological hazards are taken seriously. Behavioural data from platforms records what people clicked and shared, not what they believed or intended. The relationship between engagement and persuasion is empirically murky: high engagement can reflect outrage or entertainment rather than genuine attitude change. Measuring long-term persuasive effects through digital traces would require validated proxies for attitude formation and change, and those proxies do not yet exist at scale.</p>
+<p>The longitudinal question is particularly acute for AI-generated content. Human-authored persuasion saturates; people have finite exposure to any particular communicator. AI-generated content does not saturate in the same way: a model can generate indefinitely many variants of a persuasive message, each novel, each personalised, each drawing on whatever current contextual information is available about the recipient. The theoretical frameworks for how attitudes form under continuous, individually tailored exposure to persuasive content do not yet exist, let alone empirical tests of them.</p>
+</section>
+<section id="sec-weird" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="sec-weird"><span class="header-section-number">8.5</span> Cross-Cultural Validity and the WEIRD Problem</h2>
+<p>The persuasion literature is predominantly WEIRD: Western, Educated, Industrialised, Rich, Democratic. The experiments that generated the major findings were run on student samples at American and European universities. The platforms used to extend this research to larger samples, Amazon Mechanical Turk and Prolific, skew heavily toward the same populations. The theoretical frameworks, built from this evidence, have an unclear generalisability to the roughly six billion people who do not fit this profile.</p>
+<p>LLMs inherit and amplify this problem. Pre-training corpora are predominantly English. Even multilingual models trained on diverse language data reflect the cultural norms embedded in the high-resource languages that dominate those corpora. <span class="citation" data-cites="argyle2023out">[<a href="references.html#ref-argyle2023out" role="doc-biblioref">1</a>]</span> demonstrate that LLMs can be conditioned to produce outputs consistent with specific demographic profiles, recovering something of the variation found in human population surveys. But this conditioning operates on cultural surface features available in text — expressed values, political language, named group memberships. It does not recover the cognitive, affective, and relational dimensions of cross-cultural difference that are not explicitly stated in the training data.</p>
+<p>A persuasive message that works by invoking individual achievement and personal agency will land differently in a cultural context where self-effacement and collective solidarity are the operative norms. This is not a new insight in cross-cultural communication research, but it has not been operationalised in any large-scale benchmark. There are no standardised datasets that pair equivalent persuasive messages across a systematic sample of cultural contexts with matched behavioural outcomes. The ANES data and analogous national panel datasets are not comparable across countries in the ways that would be needed to draw cross-cultural conclusions from persuasion experiments.</p>
+<p>Building such a benchmark requires cooperation across research groups in multiple countries, access to platform-level deployment infrastructure in each, and a shared theoretical model of what cultural dimensions are expected to matter. The cross-cultural psychology literature, particularly the dimensions identified by Hofstede and the cultural cognition frameworks developed by Nisbett, provides a starting point for hypothesis generation, but those frameworks were not designed to make predictions about AI-mediated persuasion and their applicability is an open question.</p>
+<!-- CITATION NEEDED: Hofstede cultural dimensions — exact reference; Nisbett geography of thought -->
+</section>
+<section id="sec-detection" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="sec-detection"><span class="header-section-number">8.6</span> Detection and Provenance</h2>
+<p>The assumption underlying most persuasion research is that the origin of a message is known to the researcher even if not to the recipient. As AI-generated content becomes a larger share of the information environment, that assumption begins to fail for both researchers and recipients.</p>
+<p>Detection of AI-generated text has proven harder than early results suggested. Initial classifiers trained to distinguish human-authored from machine-generated text showed high accuracy on held-out test sets, then degraded rapidly as model outputs evolved and as adversarial prompting made generated text harder to detect. The current state is that no reliable, model-agnostic detector of AI-generated persuasive text exists. Detection rates for current-generation LLM output are substantially below what would be needed to provide meaningful provenance assurance at the scale of social media.</p>
+<p>This matters for persuasion research because the study of AI-mediated persuasion requires knowing which content was AI-generated. A researcher studying attitude change in an information environment that contains an unknown proportion of AI-generated content is in a structurally similar position to an epidemiologist studying disease transmission in a population with unknown vaccination rates. The confounding is not manageable by standard methods.</p>
+<p>Cryptographic watermarking approaches, which embed detectable signals in generated text at inference time, are a more promising technical direction than post-hoc classifiers. Several research groups and at least one major model provider have deployed or announced watermarking systems, but none has been adopted as an industry standard, and all can be circumvented by paraphrasing. The content provenance standards being developed by the Coalition for Content Provenance and Authenticity (C2PA) address the problem at the distribution layer rather than the generation layer, which is more robust to evasion but requires adoption by platform operators whose incentives are not always aligned with transparency.</p>
+<!-- CITATION NEEDED: C2PA standard, watermarking papers (Kirchenbauer et al. 2023 or similar) — ask Yaman before adding -->
+<p>The research gap is both technical and structural. On the technical side, the field needs detection methods that are robust across model families and to adversarial perturbation. On the structural side, it needs agreed-upon provenance standards, adoption mechanisms, and measurement frameworks for what proportion of an information environment has been AI-generated. Neither is close to being solved.</p>
+</section>
+<section id="sec-regulation" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="sec-regulation"><span class="header-section-number">8.7</span> Regulation</h2>
+<p>The regulatory landscape for AI-mediated persuasion is in rapid and inconsistent motion. The EU AI Act, adopted in 2024, classifies some AI systems used for persuasion as high-risk and imposes transparency and human-oversight requirements, but its category definitions do not map cleanly onto the technical reality of how persuasive content is generated and distributed. A model that generates persuasive political advertisements is not categorically different, in technical terms, from a model that generates marketing copy or customer service responses; the Act’s risk-based categorisation has to draw distinctions that the technology itself does not make.</p>
+<p>The US regulatory picture is more fragmented. At the federal level, the Federal Trade Commission has issued guidance on AI-generated endorsements and disclosure requirements for synthetic media in advertising, but no comprehensive AI persuasion regulation has passed Congress. State-level legislation, particularly in California and Texas, has addressed narrow cases: synthetic media in electoral communications, voice cloning for political advertising. These laws are ahead of the federal baseline in some dimensions and do not address the full space of AI-mediated persuasion.</p>
+<p>The research question that regulation raises is not merely what rules to adopt, but what rules are enforceable given the technical properties of AI-generated content. Detection is imperfect, as discussed above. Attribution of AI-generated content to a specific model or operator is technically difficult once content has been paraphrased, translated, or passed through a post-processing step. Platform-level enforcement requires platforms to cooperate with regulatory requirements in ways that may conflict with their commercial interests.</p>
+<p>A deeper regulatory challenge is that the persuasion harms regulation is designed to address are not well-defined. Regulatory frameworks borrow from defamation law, advertising standards, and electoral law, each of which was designed for a different technological context. They prohibit specific content categories (false statements of fact, undisclosed paid endorsements, fraudulent impersonation) without addressing the more diffuse harms from persuasion that is technically accurate, disclosed, and authentic but still nudges large populations toward outcomes that benefit the sender at the expense of the receiver.</p>
+</section>
+<section id="sec-simulation" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="sec-simulation"><span class="header-section-number">8.8</span> Simulation Environments and the LLM-as-Participant Turn</h2>
+<p>One response to the measurement problems described above is to use LLMs not as persuaders but as experimental participants. If an LLM conditioned on a demographic profile produces responses that correlate with the responses of actual people from that profile, then LLM simulation could substitute for expensive and slow human subject research in certain contexts.</p>
+<p><span class="citation" data-cites="argyle2023out">[<a href="references.html#ref-argyle2023out" role="doc-biblioref">1</a>]</span> call this <strong>silicon sampling</strong>: using LLMs to simulate the distribution of responses across a population, rather than collecting those responses from humans. They show that GPT-3 conditioned on demographic information recovers patterns from the American National Election Studies and the General Social Survey with accuracy that is impractical for manual simulation methods. <span class="citation" data-cites="broockman2024can">[<a href="references.html#ref-broockman2024can" role="doc-biblioref">4</a>]</span> extend this to the prediction of experiment outcomes, finding that GPT-4 can predict effect sizes from social science experiments with accuracy comparable to expert human judgement.</p>
+<p><span class="citation" data-cites="park2023generative">[<a href="references.html#ref-park2023generative" role="doc-biblioref">13</a>]</span> demonstrate a fuller simulation environment: a town of 25 generative agents, each with persistent memory, scheduled activities, and social relationships, capable of producing coordinated social behaviour (a spontaneous election, a community party) without explicit programming. This is a proof-of-concept for studying persuasion dynamics in a simulated social environment where every parameter is controllable and every interaction is logged. It addresses the observation problem directly: if the environment is synthetic, there is nothing to observe covertly; all data is generated.</p>
+<p>The LCBM framework <span class="citation" data-cites="kumar2024large">[<a href="references.html#ref-kumar2024large" role="doc-biblioref">8</a>]</span> takes a related but distinct approach: training models on content and behaviour jointly, so that the model captures not just what content looks like but what effects it has on the people who consume it. This is a step toward a persuasion simulator that can predict the downstream behavioural consequences of message choices before deployment, rather than learning from outcomes after the fact.</p>
+<p>These approaches collectively represent a methodological shift with major implications. The gap between controlled laboratory measurement and real-world persuasion effects has been a persistent feature of the field. Simulation environments that are valid proxies for real social dynamics offer a path around that gap. The validity question is not settled. LLM-simulated responses are not the same as human responses; the degree to which they diverge, and in which domains the divergence is largest, is an active area of investigation. But the direction of travel is clear. The field is moving from studying persuasion in isolated dyads in a laboratory toward studying it in social networks, in simulated populations, and in deployment environments where the persuasive agent is itself a model.</p>
+</section>
+<section id="sec-gaps" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="sec-gaps"><span class="header-section-number">8.9</span> Resource Gaps</h2>
+<p>The inventory of available resources, assembled across chapters of this review, reveals systematic gaps. They are collected here because closing them is a prerequisite for progress on the frontiers described above.</p>
+<p><strong>Behavioural outcome datasets.</strong> The available persuasion datasets measure message quality as rated by crowdworkers, or engagement metrics (clicks, shares, watch time). Neither is a validated proxy for attitude change, and neither is measured in a population that is representative of the world’s language and cultural diversity. A dataset that pairs persuasive message variants with measured downstream behaviour — actual votes, actual purchases, actual health behaviours — in a randomised design and in multiple cultural contexts does not exist at scale. Building it requires platform cooperation or population-level randomised experiments of the kind that only a handful of research groups have been able to run.</p>
+<p><strong>Longitudinal attitude tracking with content linkage.</strong> Panel survey data exists; content consumption data exists; the two are not linked. A dataset that follows the same individuals across time, links their content consumption to their attitude trajectories, and samples from the full population rather than WEIRD convenience samples is the missing instrument for longitudinal persuasion research.</p>
+<p><strong>Cross-cultural persuasion benchmark.</strong> A systematic comparison of persuasive message effectiveness across a deliberately sampled set of cultural contexts, with matched messages and equivalent behavioural outcome measures, would allow the WEIRD generalisation problem to be addressed quantitatively rather than conjectured about. Building this benchmark is a multi-year, multi-institution project; it does not currently exist.</p>
+<p><strong>Multimodal persuasion with behavioural outcomes.</strong> The existing multimodal datasets, including M2P2 <span class="citation" data-cites="bai2021m2p2">[<a href="references.html#ref-bai2021m2p2" role="doc-biblioref">2</a>]</span> and the emotion benchmarks derived from EmoSet <span class="citation" data-cites="yang2023emoset">[<a href="references.html#ref-yang2023emoset" role="doc-biblioref">18</a>]</span> and eMotions <span class="citation" data-cites="wu2023emotions">[<a href="references.html#ref-wu2023emotions" role="doc-biblioref">17</a>]</span>, measure perceptual and affective responses to multimodal content. A dataset that connects these perceptual responses to downstream behavioural outcomes, in a design that varies modality systematically, would close the gap between perception and persuasion in the multimodal domain.</p>
+<p><strong>Provenance-labelled content corpora.</strong> For detection research to advance, researchers need large corpora of content with known provenance: definitively human-authored versus definitively AI-generated versus edited by a human from AI-generated material. Such corpora degrade rapidly as model outputs evolve, which means provenance-labelled corpora are a perishable resource that must be continuously refreshed.</p>
+</section>
+<section id="sec-closing" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="sec-closing"><span class="header-section-number">8.10</span> Closing Note</h2>
+<p>The five research frontiers described in this chapter are not independent. Micro-targeting research requires longitudinal data to evaluate effects. Cross-cultural research requires multimodal content to match the media environments outside WEIRD contexts. Detection research is a precondition for valid longitudinal and cross-cultural measurement. Regulation without detection is unenforceable; detection without regulation creates a public good that private actors have no individual incentive to produce.</p>
+<p>The pattern is familiar from other fields where the phenomena of interest outran the measurement technology. Epidemiology made limited progress on chronic disease causation until longitudinal cohort studies became practical. Macroeconomics had limited predictive validity until national accounting systems were developed. Persuasion science has had, for most of its history, measurements calibrated to a world of mass broadcast communication and convenience-sample experiments. The world has changed. The measurements have not caught up. This review will be updated as they do.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -252,6 +370,66 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-argyle2023out" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Argyle, L.P. et al. 2023. Out of one, many: Using language models to simulate human samples. <em>Political Analysis</em>. 31, 3 (2023), 337–351.</div>
+</div>
+<div id="ref-bai2021m2p2" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Bai, C. et al. 2021. M2p2: Multimodal persuasion prediction using adaptive fusion. <em>IEEE Transactions on Multimedia</em>. (2021).</div>
+</div>
+<div id="ref-breakthrough-pyscenedetect" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Breakthrough 2023. <a href="https://github.com/Breakthrough/PySceneDetect">PySceneDetect: Video scene cut detection and analysis tool</a>. GitHub.</div>
+</div>
+<div id="ref-broockman2024can" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Broockman, D. et al. 2024. Can <span>LLMs</span> replace human evaluators? Predicting the results of social science experiments. <em>arXiv preprint arXiv:2406.14508</em>. (2024).</div>
+</div>
+<div id="ref-habernal2016makes" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Habernal, I. and Gurevych, I. 2016. What makes a convincing argument? Empirical analysis and detecting attributes of convincingness in web argumentation. <em>Proceedings of the 2016 conference on empirical methods in natural language processing</em> (2016).</div>
+</div>
+<div id="ref-kapoor2024measuring" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Kapoor, S. et al. 2024. Measuring and improving the well-being of users in recommendation systems. <em>Proceedings of the ACM on Human-Computer Interaction</em>. (2024).</div>
+</div>
+<div id="ref-kirillov2023segment" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Kirillov, A. et al. 2023. <a href="https://arxiv.org/abs/2304.02643">Segment anything</a>.</div>
+</div>
+<div id="ref-kumar2024large" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="nocase">Kumar, Y.K. et al.</span> 2024. Large content and behavior models to understand, simulate, and optimize content and behavior. <em>arXiv preprint arXiv:2410.02653</em>. (2024).</div>
+</div>
+<div id="ref-lazer2020meaningful" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Lazer, D. et al. 2021. Meaningful measures of human society in the twenty-first century. <em>Nature</em>. 595, (2021), 189–196.</div>
+</div>
+<div id="ref-lazer2014parable" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Lazer, D. et al. 2014. The parable of <span>Google Flu</span>: Traps in big data analysis. <em>Science</em>. 343, 6176 (2014), 1203–1205.</div>
+</div>
+<div id="ref-li2023videochat" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Li, K. et al. 2023. <a href="https://arxiv.org/abs/2305.06355">VideoChat: Chat-centric video understanding</a>.</div>
+</div>
+<div id="ref-longpre2019persuasion" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">Longpre, L. et al. 2019. Persuasion of the undecided: Language vs. The listener. <em>Proceedings of the 6th workshop on argument mining</em> (2019).</div>
+</div>
+<div id="ref-park2023generative" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">Park, J.S. et al. 2023. Generative agents: Interactive simulacra of human behavior. <em>Proceedings of UIST</em>. (2023).</div>
+</div>
+<div id="ref-pellert2023ai" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">Pellert, M. et al. 2023. AI psychometrics: Assessing the psychological profiles of large language models through psychometric inventories. <em>Perspectives on Psychological Science</em>. (2023).</div>
+</div>
+<div id="ref-qin2020u2" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">Qin, X. et al. 2020. U2-net: Going deeper with nested u-structure for salient object detection. <em>Pattern recognition</em>. 106, (2020), 107404.</div>
+</div>
+<div id="ref-sharma2018conceptual" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">Sharma, P. et al. 2018. Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning. <em>Proceedings of the 56th annual meeting of the association for computational linguistics (volume 1: Long papers)</em> (2018), 2556–2565.</div>
+</div>
+<div id="ref-wu2023emotions" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">Wu, X. et al. 2023. <a href="https://arxiv.org/abs/2311.17335">eMotions: A large-scale dataset for emotion recognition in short videos</a>.</div>
+</div>
+<div id="ref-yang2023emoset" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">Yang, J. et al. 2023. EmoSet: A large-scale visual emotion dataset with rich attributes. <em>Proceedings of the IEEE/CVF international conference on computer vision</em> (2023), 20383–20394.</div>
+</div>
+<div id="ref-zhang2018equal" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">Zhang, M. et al. 2018. Equal but not the same: Understanding the implicit relationship between persuasive images and text. <em>arXiv preprint arXiv:1807.08205</em>. (2018).</div>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -661,8 +839,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/06-digital-revolution.html" class="pagination-link" aria-label="The Last Twenty Years: Data, Models, and Behavioural Science at Scale">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The Last Twenty Years: Data, Models, and Behavioural Science at Scale</span></span>
+      <a href="../chapters/06-resources.html" class="pagination-link" aria-label="Resources for Persuasion Research">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Resources for Persuasion Research</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -676,5 +854,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/edit/main/chapters/07-future.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/edit/main/chapters/07-future.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yamanksingla/yamanksingla.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
