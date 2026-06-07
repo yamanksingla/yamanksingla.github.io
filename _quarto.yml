@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - google2470e9a9f8650696.html
 
 book:
   title: "Persuasion via Man and Machine"
