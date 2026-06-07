@@ -38,10 +38,10 @@ book:
     right:
       - icon: globe
         href: https://sites.google.com/view/yaman-kumar/
-      - icon: github
-        href: https://github.com/yamanksingla/yamanksingla.github.io
       - icon: linkedin
         href: https://www.linkedin.com/in/yaman-kumar/
+      - icon: twitter
+        href: https://twitter.com/yamanksingla
       - icon: envelope
         href: mailto:dr.yamankumar@gmail.com
 
