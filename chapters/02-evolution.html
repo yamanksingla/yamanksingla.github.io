@@ -323,15 +323,96 @@ div.csl-indent {
 </section>
 <section id="sec-major-transitions" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-major-transitions"><span class="header-section-number">3.2</span> The Major Transitions Framework</h2>
-<p>Life has repeatedly solved a particular problem: how to get formerly independent entities to work as a single unit. Each time this happened, evolution created a new level of organisation. Genes that once competed for replication started cooperating inside chromosomes. Cells that once competed for nutrients started cooperating inside bodies. Organisms that once competed for territory started cooperating inside colonies. At every step, the unit of evolutionary competition shifted upward: what was previously the arena of conflict became the platform for a higher-level competitor.</p>
-<p>Maynard Smith and Szathmáry <span class="citation" data-cites="maynardsmith1995major">[<a href="references.html#ref-maynardsmith1995major" role="doc-biblioref">31</a>]</span> catalogued eight of these moments and named them <strong>major transitions</strong>. Starting from the origin of self-replicating molecules in compartments, the sequence runs through chromosomes, the DNA–protein translation system, eukaryotic cells, multicellular organisms, eusocial insect colonies, and finally human language societies. At each step, formerly competing entities were brought to pursue a shared objective, and each transition required a mechanism capable of achieving that alignment.</p>
-<p>The chromosome transition illustrates the problem at its simplest. Early genomes faced a free-rider problem: a gene that replicates faster than its neighbours gains within the genome even if doing so degrades the organism that carries it. The shared objective, organismal survival, was being undermined by within-genome competition. Chromosomes resolved this by physically tying genes to a single centromere, so that every gene replicates exactly once per cell division, no more. The chromosome is a coordination mechanism. By making individual replication impossible, it aligns each gene’s fate with the organism’s fate. The genes cannot pursue separate agendas. Their interests merge with the organism’s.</p>
-<p>The DNA–protein system produced a different kind of alignment. Early self-replicating molecules were their own catalysts: the same molecule carried information and performed chemistry. This created a conflict: a molecule optimised for stable information storage is chemically inert, while a molecule optimised for catalysis is reactive and flexible. You cannot fully satisfy both demands in one structure. The transition separated these functions into two molecular classes: DNA for storage, proteins for catalysis. The genetic code, the set of correspondences between nucleotide triplets and amino acids, is the communication channel between them, and it has remained essentially unchanged for three billion years. What the code achieved was alignment between two otherwise separate systems: everything the DNA encodes, the protein machinery executes. Their shared objective is producing a functional organism, and the code is what makes each committed to the other’s output.</p>
-<p>The eukaryotic transition is the clearest case of persuasion in the molecular record. About 1.5 billion years ago, a bacterial cell engulfed another bacterium and, rather than digesting it, incorporated it. The inner bacterium, ancestor of the modern mitochondrion, could extract far more energy from oxygen than its host. Over time, most of the mitochondrion’s own genome migrated to the host nucleus, making the partnership structurally irreversible. The chemical signals that originally governed the inner bacterium’s replication cycle became the regulatory signals through which the host nucleus now manages its energy supply. A formerly independent organism was brought to pursue the host’s objective, producing energy on demand, through chemical signalling that progressively eliminated its autonomy. The inner bacterium was absorbed without negotiation — the outcome equivalent to a merger: alignment of behaviour toward a shared objective, sustained by a communication channel that neither party can now abandon.</p>
-<p>Queen pheromones in eusocial insect colonies operate on the same logic, on a timescale of weeks rather than billions of years. A honeybee queen produces a blend of fatty acids and aromatics that is distributed through the colony by physical contact and grooming. Workers who receive this signal have their ovarian development chemically suppressed; they forage, build comb, and die at the entrance defending the hive. From the worker’s perspective this looks like a catastrophic sacrifice of individual fitness, and from the gene’s perspective it sometimes is. What makes it stable is the arithmetic of haplodiploidy: workers share three-quarters of their genes with sisters, making the queen’s daughters a more efficient vehicle for a worker’s genes than the worker’s own eggs. The pheromone is a true signal. It says, in chemical terms, that propagation through the queen is arithmetically superior to direct reproduction, and the arithmetic is correct. Workers respond accordingly.</p>
-<p>The human language transition followed the same pattern, but the communication system it produced was orders of magnitude more flexible than any of its predecessors. Grooming could maintain alliances in groups of fifty. Alarm calls could coordinate vigilance across a troop. Language made something different possible: the transmission of cooperative obligations across time, across distance, and among individuals who had never met. A promise made today can bind behaviour next month. A reputation built over years in one location travels to the next. A norm that emerged in one generation can be taught explicitly to the next, along with the reasons behind it. The earlier transitions built communication systems; language built a system capable of representing the content of other communication systems, and of revising that content through argument.</p>
-<p>Chemical gradients push organelles to differentiate. Queen pheromones sustain reproductive division of labour across fifty thousand individuals. Dominance displays hold competitive relationships in place without constant fighting. Each of these systems is innate and inflexible: the signal triggers a fixed response, and the exchange cannot be renegotiated. Language changed this entirely. The signal became revisable. The response could be argued with. Persuasion capable of representing futures, proposing hypothetical arrangements, and invoking norms not yet present in the immediate environment became possible for the first time.</p>
-<p>The framework makes a prediction: each time cooperation scaled up, a new communication technology was its precondition. The rest of this chapter examines those technologies in order of complexity, beginning with the chemical and mechanical signals of insect colonies and ending with the recursive grammar that allowed human societies to reach scales no other primate has approached.</p>
+<p>Every cell in your body carries the same genome, yet 37 trillion of them divide labour across tissues with no central command. A honeybee colony directs fifty thousand workers toward one reproductive goal. A civilisation coordinates billions of strangers. The same problem recurs at every scale: how do formerly independent agents come to act as one?</p>
+<p>Maynard Smith and Szathmáry <span class="citation" data-cites="maynardsmith1995major">[<a href="references.html#ref-maynardsmith1995major" role="doc-biblioref">31</a>]</span> argued that the history of life is punctuated by eight moments when this problem was solved by building a new level of organisation. They named them <strong>major transitions</strong>:</p>
+<div id="tbl-transitions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-transitions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: The eight major transitions identified by Maynard Smith and Szathmáry. In each, agents that had competed for their own replication came to serve the survival of the larger unit they composed, held together by a medium of communication that grew stronger at every step.
+</figcaption>
+<div aria-describedby="tbl-transitions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 16%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Transition</th>
+<th>Independent agents</th>
+<th>New unit</th>
+<th>Communication medium</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Replicating molecules</td>
+<td>Molecules in a compartment</td>
+<td>Physical enclosure</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Independent genes</td>
+<td>Chromosomes</td>
+<td>Physical linkage</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>RNA (gene and enzyme)</td>
+<td>DNA and protein</td>
+<td>Molecular code</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Prokaryotic cells</td>
+<td>The eukaryotic cell</td>
+<td>Chemical regulation</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Asexual clones</td>
+<td>Sexual populations</td>
+<td>Genetic exchange</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Single cells</td>
+<td>Multicellular organisms</td>
+<td>Hormonal gradients</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Solitary insects</td>
+<td>Eusocial colonies</td>
+<td>Pheromones and touch</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Primate societies</td>
+<td>Human language societies</td>
+<td>Language and culture</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Read down the list and one structure repeats. In every case, agents that had been competing for their own replication came to serve a shared objective: the survival of the larger unit they now composed. Genes stopped racing one another and replicated together inside the chromosome. Single cells gave up independent life and specialised inside a body.</p>
+<p>An objective shared among formerly independent agents cannot enforce itself. Something has to align them, carrying from one agent to the next the information that their fate now lies with the larger unit. That something is communication, in the sense set out in <a href="#sec-definitions" class="quarto-xref"><span>Section 3.1</span></a>: persuasion is the intent, the alignment of an agent toward a shared objective; communication is the means; coordination is the result.</p>
+<p>The right-hand column of the table names the medium each transition relied on. Read as a sequence, those media are the argument of this chapter.</p>
+<p>Each is stronger than the one before, able to align more agents, across greater distance, around ever more abstract objectives. And each, once it has bound its level into a single unit, becomes the precondition for the level above.</p>
+<p>Begin with the chromosome. A gene is a stretch of genetic material that carries instructions and can be copied. In the earliest life, genes floated as separate molecules, each copied on its own, and each free to copy itself as fast as it could. That freedom was the problem. A gene that replicated faster than its neighbours would flood the next generation with copies of itself, even when those copies did nothing for the cell, or dragged it down. A crowd of free-floating genes pulls itself apart. The chromosome ends the race by chemically binding the genes end to end into a single strand, copied once per division and handed on whole. No gene can run ahead, because none is copied on its own any more. Bound to a common fate, a gene that helps the cell now helps its own copies too, and the cell becomes worth building. That truce was the precondition for the next step: a genome stable enough to divide labour among the molecules it carried.</p>
+<p>That labour first divided inside the cell. The earliest life ran on <strong>RNA</strong>, a single molecule forced to do two incompatible jobs. It had to hold information, which rewards a molecule that sits still and stays stable, and it had to drive chemical reactions, which rewards a molecule that folds into restless, reactive shapes. No molecule can be both at once. RNA did each job badly because it could never stop doing the other.</p>
+<p>The transition broke the deadlock by splitting the two jobs apart. <strong>DNA</strong> took the archive and grew stable and inert; proteins took the chemistry and grew fast and versatile. Each became superb at its one task and, in the same stroke, helpless without the other. DNA now held every instruction and could act on none of them. Proteins could act on anything and remembered nothing. Between them lay a gap no chemistry could bridge, because the two speak in different alphabets. What spanned it was a shared code. The <strong>genetic code</strong> is a fixed table both sides honour: DNA spells out its instructions three letters at a time, each three-letter <strong>codon</strong> standing for one building block, and the protein machinery reads the same table to assemble what the instructions specify. The split made two specialists out of one generalist; the code is what kept them working as one. That paired system, a stable memory commanding a versatile workforce, is what the next transition would wrap inside a single complex cell.</p>
+<p>Communication next learned to cross open space. A <strong>chemical signal</strong> is a molecule one body releases that drifts to another and changes its behaviour by latching onto a receptor, the way a key turns a lock. One cell could now reach into another without touching it. The eukaryotic cell, the elaborate cell that every animal, plant, and fungus is built from, was born from exactly such a reach. Around 1.5 billion years ago one bacterium swallowed another and, instead of digesting it, kept it alive as a captive. The prisoner, ancestor of the <strong>mitochondrion</strong>, could wring far more energy from oxygen than its captor, and over time the chemical signals that had once run its own life were turned to the host’s purposes: the molecules that once governed the captive now answer the host’s demand for energy. A free-living organism had been reduced to an organ, held in place by a chemical leash. That leash then scaled up. In a body of many cells, all sharing one genome, a cell becomes nerve or muscle or bone by reading the concentration of signalling molecules around it, taking its orders from a gradient. Chemistry could now hold billions of separate cells to a single plan while leaving each one intact, and the transitions to come would push that reach past the body altogether: first to two organisms, then to swarms of them.</p>
+<p>Sexual reproduction reached the first of those, the exchange between two whole organisms. An asexual lineage is a closed line: every offspring is a copy of one parent, so a good gene that arises in it can never travel to another line, and a population’s best discoveries stay locked in the separate lineages that happened on them, each dying out with the line that carried it. Sex forces those lines open. By drawing genes from two parents and shuffling them, a process called <strong>recombination</strong>, it gathers variants that arose apart into a single offspring, letting a population combine its scattered gains far faster than any lone line could accumulate them. Here, for the first time, a transition turned on an exchange between two separate organisms. The step from two to many came next.</p>
+<p>Chemistry then breached the wall of the single body. In a <strong>eusocial</strong> colony the cooperating units are whole organisms, thousands of them, held together by the same kind of signal that once governed cells. A honeybee queen secretes a <strong>pheromone</strong> into the shared air and surfaces of the hive, picked up by the workers as they groom her and feed one another. It shuts down their ovaries and turns them to foraging and defence, so that fifty thousand insects spend their lives on the queen’s reproduction as though they were organs of her body. Touch carries its own traffic across the colony: a returning forager’s waggle dance is read by followers pressed against her in the dark, a message felt rather than seen, decoded in full in <a href="#sec-eusociality" class="quarto-xref"><span>Section 3.4.1</span></a>. One chemical, broadcast through a shared medium, could now bend an entire society of separate organisms to a single purpose. And there its power stopped. The signal fires a fixed response; a worker cannot question it, and the queen cannot use it to ask for anything she has not asked before. Coordination had reached the scale of a society while the message itself stayed frozen.</p>
+<p>Language broke that freeze. Every medium so far ran on a fixed signal and an automatic answer: linkage cannot be renegotiated, a pheromone admits no exception, a gradient gives the same order every time. A word is different. Its tie to its meaning is arbitrary and learned, so it can be combined, qualified, taken back, and argued over in the act of speaking. And it can point away from the present moment: to the past, to a future that has not arrived, to an obligation that exists only because people say it does. A plan for tomorrow’s hunt. A promise to repay next season. A rule that binds people who are not in the room. For the first time a signal could name a shared objective, invite the listener to weigh it, and be talked out of it, and cooperation could reach strangers and stretch across time. <a href="#sec-language-transition" class="quarto-xref"><span>Section 3.9</span></a> takes up how language crossed this threshold, and <a href="#sec-hierarchy" class="quarto-xref"><span>Section 3.9.3</span></a> traces the climb from simple signals to the recursive grammar that makes such open-ended messages possible. Language also opened a further medium that nothing before it could sustain: culture.</p>
+<p>A worker bee must grow its response to the queen afresh in every generation, because the message is written in its genes. A human child is born only with the capacity for language and takes its content, a story, a norm, a name to trust or avoid, from the people nearby. Once a shared objective could live in a story instead of a gene, it could spread between strangers within a single lifetime and pile up across generations, each one starting from where the last left off. Culture carried coordination past the family and past the single lifespan, out to the scale of tribes, religions, and states. It is the engine behind the shared fictions, money, nations, gods, that <a href="#sec-shared-narratives" class="quarto-xref"><span>Section 3.9.9</span></a> examines, and the twin inheritance of genes and culture that <a href="#sec-dual-inheritance" class="quarto-xref"><span>Section 3.9.8</span></a> develops.</p>
+<p>One line runs the length of the chapter: every time cooperation reached a new scale, a stronger medium of communication had to come first. Physical linkage bound the genome. A shared code joined memory to action. Chemistry built the cell and the body, and sex let two lineages pool what each had found. Pheromones held the colony to one purpose. Language tore the message loose from the present, and culture carried it beyond any single life. The sections that follow take these media in turn, opening with the chemical, tactile, and gestural signals of insect colonies and primate troops in <a href="#sec-nonhuman" class="quarto-xref"><span>Section 3.4</span></a>, and closing on the recursive grammar, and the shared fictions, that let human societies reach a scale no other species has come near.</p>
 </section>
 <section id="sec-biocultural" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-biocultural"><span class="header-section-number">3.3</span> From Genes to Culture: Bio-cultural Co-evolution</h2>
@@ -464,7 +545,7 @@ div.csl-indent {
 <div id="tbl-timeline" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.1: Key events in human evolutionary history. Mya = million years ago; kya = thousand years ago.
+Table&nbsp;3.2: Key events in human evolutionary history. Mya = million years ago; kya = thousand years ago.
 </figcaption>
 <div aria-describedby="tbl-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -599,7 +680,7 @@ Table&nbsp;3.1: Key events in human evolutionary history. Mya = million years ag
 <div id="tbl-hierarchy" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hierarchy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.2: The hierarchy of linguistic capacity, from signals to abstract reference. Each level is a precondition for the next. Human language occupies all seven levels; no non-human system is known to exceed Level 2 without sustained human training.
+Table&nbsp;3.3: The hierarchy of linguistic capacity, from signals to abstract reference. Each level is a precondition for the next. Human language occupies all seven levels; no non-human system is known to exceed Level 2 without sustained human training.
 </figcaption>
 <div aria-describedby="tbl-hierarchy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -794,7 +875,7 @@ Table&nbsp;3.2: The hierarchy of linguistic capacity, from signals to abstract r
 <div id="tbl-scales" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.3: Persuasion as the enabling mechanism of successive cooperative transitions.
+Table&nbsp;3.4: Persuasion as the enabling mechanism of successive cooperative transitions.
 </figcaption>
 <div aria-describedby="tbl-scales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
