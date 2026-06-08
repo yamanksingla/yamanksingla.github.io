@@ -140,8 +140,8 @@ The right-hand column of the table names the medium each transition relied on.
 Read as a sequence, those media are the argument of this chapter.
 
 Each is stronger than the one before, able to align more agents, across greater
-distance, around ever more abstract objectives. And each, once it has bound its
-level into a single unit, becomes the precondition for the level above.
+distance, around ever more abstract objectives. And each, by binding its own level
+into a single unit, hands the next transition the platform it needs to begin.
 
 Begin with the chromosome. A gene is a stretch of genetic material that carries
 instructions and can be copied. In the earliest life, genes floated as separate
@@ -153,8 +153,9 @@ genes pulls itself apart. The chromosome ends the race by chemically binding the
 genes end to end into a single strand, copied once per division and handed on
 whole. No gene can run ahead, because none is copied on its own any more. Bound to
 a common fate, a gene that helps the cell now helps its own copies too, and the
-cell becomes worth building. That truce was the precondition for the next step: a
-genome stable enough to divide labour among the molecules it carried.
+cell becomes worth building. Linkage bought the first cooperation in the history
+of life, and a genome that finally held together was the platform the next
+transition needed: stable enough to divide labour among the molecules it carried.
 
 That labour first divided inside the cell. The earliest life ran on **RNA**, a
 single molecule forced to do two incompatible jobs. It had to hold information,
@@ -172,9 +173,9 @@ gap no chemistry could bridge, because the two speak in different alphabets. Wha
 spanned it was a shared code. The **genetic code** is a fixed table both sides
 honour: DNA spells out its instructions three letters at a time, each three-letter
 **codon** standing for one building block, and the protein machinery reads the
-same table to assemble what the instructions specify. The split made two
-specialists out of one generalist; the code is what kept them working as one. That
-paired system, a stable memory commanding a versatile workforce, is what the next
+same table to assemble what the instructions specify. The code let memory and
+action work as one system instead of two stranded halves, and that system, a
+stable archive commanding a versatile workforce, was the toolkit the next
 transition would wrap inside a single complex cell.
 
 Communication next learned to cross open space. A **chemical signal** is a
@@ -191,9 +192,10 @@ host's demand for energy. A free-living organism had been reduced to an organ,
 held in place by a chemical leash. That leash then scaled up. In a body of many
 cells, all sharing one genome, a cell becomes nerve or muscle or bone by reading
 the concentration of signalling molecules around it, taking its orders from a
-gradient. Chemistry could now hold billions of separate cells to a single plan
-while leaving each one intact, and the transitions to come would push that reach
-past the body altogether: first to two organisms, then to swarms of them.
+gradient. Signalling let chemistry hold billions of separate cells to a single
+plan while leaving each one intact, and that reach across the gaps between
+distinct bodies was what the next transitions would extend further still: first to
+two organisms, then to swarms of them.
 
 Sexual reproduction reached the first of those, the exchange between two whole
 organisms. An asexual lineage is a closed line: every offspring is a copy of one
@@ -202,9 +204,10 @@ population's best discoveries stay locked in the separate lineages that happened
 on them, each dying out with the line that carried it. Sex forces those lines
 open. By drawing genes from two parents and shuffling them, a process called
 **recombination**, it gathers variants that arose apart into a single offspring,
-letting a population combine its scattered gains far faster than any lone line
-could accumulate them. Here, for the first time, a transition turned on an
-exchange between two separate organisms. The step from two to many came next.
+letting a population pool its scattered gains far faster than any lone line could
+accumulate them. With sex, coordination crossed a threshold it had never reached
+before, from within a single organism to between two of them, and the leap from
+two to many would follow in the colony.
 
 Chemistry then breached the wall of the single body. In a **eusocial** colony the
 cooperating units are whole organisms, thousands of them, held together by the
@@ -219,8 +222,9 @@ seen, decoded in full in @sec-eusociality. One chemical, broadcast through a
 shared medium, could now bend an entire society of separate organisms to a single
 purpose. And there its power stopped. The signal fires a fixed response; a worker
 cannot question it, and the queen cannot use it to ask for anything she has not
-asked before. Coordination had reached the scale of a society while the message
-itself stayed frozen.
+asked before. Coordination had reached the scale of a whole society, yet the
+message stayed frozen, and thawing it was the task that fell to the medium that
+came next.
 
 Language broke that freeze. Every medium so far ran on a fixed signal and an
 automatic answer: linkage cannot be renegotiated, a pheromone admits no exception,
@@ -231,11 +235,11 @@ moment: to the past, to a future that has not arrived, to an obligation that
 exists only because people say it does. A plan for tomorrow's hunt. A promise to
 repay next season. A rule that binds people who are not in the room. For the first
 time a signal could name a shared objective, invite the listener to weigh it, and
-be talked out of it, and cooperation could reach strangers and stretch across
-time. @sec-language-transition takes up how language crossed this threshold, and
+be talked out of it, so cooperation could reach strangers and stretch across time.
+@sec-language-transition takes up how language crossed this threshold, and
 @sec-hierarchy traces the climb from simple signals to the recursive grammar that
-makes such open-ended messages possible. Language also opened a further medium
-that nothing before it could sustain: culture.
+makes such open-ended messages possible. And language opened the way to one
+further medium that nothing before it could sustain: culture.
 
 A worker bee must grow its response to the queen afresh in every generation,
 because the message is written in its genes. A human child is born only with the
